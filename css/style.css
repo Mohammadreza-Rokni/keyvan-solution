@@ -70,6 +70,11 @@ a:focus {
   color: initial;
 }
 
+.btn-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .btn,
 .btn:focus {
   outline: none !important;
