@@ -70,6 +70,11 @@ a:focus {
   color: initial;
 }
 
+.btn-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .btn,
 .btn:focus {
   outline: none !important;
@@ -462,7 +467,6 @@ a:focus {
   display: flex;
   margin: 0 -5px;
   margin-top: 45px;
-  justify-content: flex-end;
 }
 
 .slider_section .detail-box .btn-box a {
@@ -533,6 +537,7 @@ a:focus {
 
 .service_section {
   display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -781,6 +786,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
 }
 
 .client_section .box .img-box {
@@ -865,9 +871,6 @@ a:focus {
   background-color: #ffffff;
 }
 
-.why_us_section .heading_container h2{
-  margin-left: auto;
-}
 .why_us_section .why_us_container .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,7 +880,6 @@ a:focus {
   align-items: flex-start;
   margin-top: 45px;
 }
-
 
 .why_us_section .why_us_container .box .img-box {
   background-color: #f07b26;
@@ -909,12 +911,21 @@ a:focus {
   transition: all 0.3s;
 }
 
+.why_us_section .why_us_container .box .detail-box {
+  margin-left: auto;
+}
+
 .why_us_section .why_us_container .box .img-box img {
   width: 45px;
 }
 
+.why_us_section .heading_container h2 {
+  margin-left: auto;
+}
+
 .why_us_section .why_us_container .box .detail-box h5 {
   font-weight: bold;
+  margin-left: auto;
 }
 
 .why_us_section .why_us_container .box:hover .img-box {
