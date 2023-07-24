@@ -462,6 +462,7 @@ a:focus {
   display: flex;
   margin: 0 -5px;
   margin-top: 45px;
+  justify-content: flex-end;
 }
 
 .slider_section .detail-box .btn-box a {
@@ -864,6 +865,9 @@ a:focus {
   background-color: #ffffff;
 }
 
+.why_us_section .heading_container h2{
+  margin-left: auto;
+}
 .why_us_section .why_us_container .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -873,6 +877,7 @@ a:focus {
   align-items: flex-start;
   margin-top: 45px;
 }
+
 
 .why_us_section .why_us_container .box .img-box {
   background-color: #f07b26;
