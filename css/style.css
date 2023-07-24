@@ -532,6 +532,7 @@ a:focus {
 
 .service_section {
   display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -780,6 +781,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
 }
 
 .client_section .box .img-box {
@@ -904,12 +906,21 @@ a:focus {
   transition: all 0.3s;
 }
 
+.why_us_section .why_us_container .box .detail-box {
+  margin-left: auto;
+}
+
 .why_us_section .why_us_container .box .img-box img {
   width: 45px;
 }
 
+.why_us_section .heading_container h2 {
+  margin-left: auto;
+}
+
 .why_us_section .why_us_container .box .detail-box h5 {
   font-weight: bold;
+  margin-left: auto;
 }
 
 .why_us_section .why_us_container .box:hover .img-box {
