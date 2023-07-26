@@ -1233,24 +1233,60 @@ a:focus {
 .info_section {
   padding: 40px 0;
   background-color: #053406;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company_info_container {
+  flex: 1;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin-bottom: 10px;
+  max-width: 50%;
 }
 
 .company_name {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.company_description_container {
+  max-width: 120%;
 }
 
 .company_description_container p {
   font-size: 16px;
   color: #ffffff;
+  margin-left: auto;
 }
 
-.contact_heading_title {
-  font-size: 20px;
-  font-weight: bold;
+.footer_contact_info_inner {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.contact_info_container {
+  padding-right: 5%;
+}
+
+.company_name,
+.contact_heading_title,
+.contact_icon_list_text,
+.contact_phone_numbers_container p {
   color: #ffffff;
-  margin-bottom: 10px;
+}
+
+.company_description_container p,
+.contact_icon_list_text,
+.contact_phone_numbers_container p {
+  font-size: 16px;
 }
 
 .contact_icon_list_items {
@@ -1267,18 +1303,6 @@ a:focus {
   font-size: 18px;
   margin-right: 10px;
   color: #333;
-}
-
-.contact_icon_list_text {
-  font-size: 16px;
-  color: #ffffff;
-}
-
-/* Contact Phone Numbers */
-.contact_phone_numbers_container p {
-  font-size: 16px;
-  color: #ffffff;
-  margin-top: 10px;
 }
 
 .contact_icon_list_item a {
