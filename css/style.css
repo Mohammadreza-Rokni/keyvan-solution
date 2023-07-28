@@ -417,7 +417,7 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url(../images/slider-bg.jpg);
+  background-image: url(../images/ff4.jpeg);
   background-size: cover;
 }
 
@@ -478,8 +478,8 @@ a:focus {
 .slider_section .detail-box .btn-box .btn1 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #f07b26;
-  color: #ffffff;
+  background-color: #f0f900;
+  color: #000000;
   border-radius: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -487,7 +487,7 @@ a:focus {
 }
 
 .slider_section .detail-box .btn-box .btn1:hover {
-  background-color: #bc570d;
+  background-color:rgb(192, 192, 25);
 }
 
 .slider_section .detail-box .btn-box .btn2 {
@@ -532,7 +532,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 23px;
   height: 23px;
-  background-color: #f07b26;
+  background-color: #f0f900;
 }
 
 .service_section {
@@ -714,8 +714,8 @@ a:focus {
   padding: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #f07b26;
-  color: #ffffff;
+  background-color: #f0f900;
+  color: #000000;
   visibility: hidden;
   opacity: 0;
 }
@@ -1318,12 +1318,12 @@ a:focus {
 /* footer section*/
 .footer_section {
   position: relative;
-  background-color: #ffffff;
+  background-color: #dc0000;
   text-align: center;
 }
 
 .footer_section p {
-  color: #252525;
+  color: hsl(0, 0%, 100%);
   padding: 25px 0;
   margin: 0;
 }
