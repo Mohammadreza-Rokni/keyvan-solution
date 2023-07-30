@@ -245,6 +245,13 @@ a:focus {
 .navbar-brand img {
   width: 125px;
 }
+/* این کد نوار ناوبری راست چین می‌کند */
+.navbar-nav {
+  direction: rtl;
+  text-align: left;
+}
+
+
 
 .custom_nav-container {
   padding: 0;
@@ -1331,4 +1338,5 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
 /*# sourceMappingURL=style.css.map */
