@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView
-from .models import customers
+from .models import Customer, Contactus, Aboutus
 # Create your views here.
 
 class Career(TemplateView):
@@ -8,4 +8,12 @@ class Career(TemplateView):
 
 class Customers(DetailView):
     template_name = 'index.html'
-    model = customers
+    model = Customer
+
+class ContactUs(DetailView):
+    template_name = 'index.html'
+    model = Contactus
+
+class AboutUs(DetailView):
+    template_name = 'index.html'
+    model = Aboutus
