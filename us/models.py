@@ -9,7 +9,7 @@ fieldـofـactivity_list = [
   ('services available', 'Services available')
 ]
 
-degreeـofـeducation_list = [
+degreeـofـeducation_list = [ 
   ('Diploma', 'Diploma'),
   ('Associate', 'Associate'),
   ('Bachelor', 'Bachelor'),
