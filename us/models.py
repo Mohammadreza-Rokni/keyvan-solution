@@ -28,8 +28,7 @@ class Contactus(models.Model):
   title = models.CharField(max_length=100)
   text = models.TextField()
   created = models.DateTimeField()
-  first_name = models.CharField(max_length=100)
-  last_name = models.CharField(max_length=100)
+  full_name = models.CharField(max_length=200)
   phone_number = models.IntegerField(max_length=12)
   fieldـofـactivity = fieldـofـactivity_list
   activityـprovince = models.CharField(max_length=100)
