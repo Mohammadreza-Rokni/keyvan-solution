@@ -12,6 +12,26 @@ class Customers(DetailView):
     template_name = 'index.html'
     model = Customer
 
+    def get(self, request):
+        form = Supplierform()
+
+        return render(request, "html page" , {
+            "form" : form
+        })
+
+
+    def post(self, request):
+        form = Supplierform(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect("html page")
+        
+        return render(request, "html page" , {
+            "form" : form
+        })
+    
+
 
 class ContactUs(DetailView):
     template_name = 'index.html'
