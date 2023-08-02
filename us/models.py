@@ -40,7 +40,7 @@ class Contactus(models.Model):
         return self.title
     class Meta:
         verbose_name = "تماس با ما"
-        # verbose_nameـplural = "تماس با ما"
+        verbose_name_plural = "تماس با ما"
 
 class Aboutus(models.Model):
     title = models.CharField(max_length=100)
@@ -52,7 +52,7 @@ class Aboutus(models.Model):
 
     class Meta:
         verbose_name = "درباره ما"
-        # verbose_name_plural = "درباره ما"
+        verbose_name_plural = "درباره ما"
 
 class Customer(models.Model):
     logo = models.ImageField()
