@@ -2,23 +2,12 @@ from django import forms
 from .models import Contactus
 
 
-class Supplierform(forms.ModelForm):
+class SupplierForm(forms.ModelForm):
     class Meta:
         model = Contactus
-        fields = ['full_name', 'phone_number', 'fieldـofـactivity', 'activityـprovince']
+        fields = ['full_name', 'phone_number', 'field_of_activity', 'activity_province']
 
-        # error_messages = {
-            
-        # }
-
-
-
-
-class Jobseekerform(forms.ModelForm):
+class JobSeekerForm(forms.ModelForm):
     class Meta:
         model = Contactus
-        exclude = ['full_name', 'phone_number', 'fieldـofـactivity', 'activityـprovince']
-
-        # error_messages = {
-            
-        # }   
+        exclude = ['full_name', 'phone_number', 'field_of_activity', 'activity_province']
