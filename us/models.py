@@ -65,3 +65,12 @@ class Customer(models.Model):
     class Meta:
         verbose_name = "مشتری"
         verbose_name_plural = "مشتریان"
+
+
+class Career(models.Model):
+    image = models.ImageField()
+    description = models.TextField()
+    
+    class Meta:
+        verbose_name = "فرصت شغلی"
+        verbose_name_plural = "فرصت های شغلی"
