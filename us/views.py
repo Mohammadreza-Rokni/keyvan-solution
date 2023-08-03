@@ -7,6 +7,22 @@ class Career(DetailView):
     template_name = 'index.html'
     model = Career
 
+    def get(self, request):
+        form = SupplierForm()
+        return render(request, "html_page.html", {
+            "form": form
+        })
+
+    def post(self, request):
+        form = SupplierForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("html_page")
+        return render(request, "html_page.html", {
+            "form": form
+        })
+    
+
 class Customers(DetailView):
     template_name = 'index.html'
     model = Customer
@@ -25,6 +41,7 @@ class Customers(DetailView):
         return render(request, "html_page.html", {
             "form": form
         })
+    
 
 class ContactUs(DetailView):
     template_name = 'index.html'
@@ -51,6 +68,7 @@ class ContactUs(DetailView):
             "jobseeker_form": jobseeker_form,
             "supplier_form": supplier_form
         })
+
 
 class AboutUs(DetailView):
     template_name = 'index.html'
