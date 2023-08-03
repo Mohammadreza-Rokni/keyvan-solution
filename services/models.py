@@ -4,9 +4,9 @@ from django.utils.text import slugify
 
 # Create your models here.
 class Oursolutions(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField()
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(verbose_name='عکس')
     slug = models.SlugField(blank=True, unique=True)
 
     def save(
@@ -26,9 +26,9 @@ class Oursolutions(models.Model):
         verbose_name_plural = "راهکارهای ما"
 
 class Ourservices(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField()
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(verbose_name='عکس')
     slug = models.SlugField(blank=True, unique=True)
 
     def __str__(self):
@@ -48,9 +48,9 @@ class Ourservices(models.Model):
         verbose_name_plural = "خدمات ما"
 
 class Ourproducts(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField()
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(verbose_name='عکس')
     slug = models.SlugField(blank=True, unique=True)
 
     def __str__(self):
@@ -71,7 +71,7 @@ class Ourproducts(models.Model):
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, verbose_name='عنوان')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -83,12 +83,12 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField()
-    publish = models.DateTimeField(auto_now_add=True)
-    update = models.DateTimeField(auto_now=True)
-    Category = models.ManyToManyField(Category, related_name='articles')
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(verbose_name='عکس')
+    publish = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ انتشار')
+    update = models.DateTimeField(auto_now=True, verbose_name='تاریخ بروزسانی')
+    Category = models.ManyToManyField(Category, related_name='articles', verbose_name='دسته بندی')
     slug = models.SlugField(blank=True, unique=True)
 
     def save(

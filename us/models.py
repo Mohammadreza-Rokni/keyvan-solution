@@ -22,19 +22,19 @@ TYPE_OF_COOPERATION_CHOICES = [
 ]
 
 class Contactus(models.Model):
-    title = models.CharField(max_length=100)
-    text = models.TextField()
-    created = models.DateTimeField()
-    full_name = models.CharField(max_length=200)
-    phone_number = models.CharField(max_length=12)
-    field_of_activity = models.CharField(max_length=100, choices=FIELD_OF_ACTIVITY_CHOICES)
-    activity_province = models.CharField(max_length=100)
-    date_of_birth = models.DateField()
-    degree_of_education = models.CharField(max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES)
-    field_of_study = models.CharField(max_length=100)
-    skill = models.TextField()
-    history = models.IntegerField()
-    type_of_cooperation = models.CharField(max_length=100, choices=TYPE_OF_COOPERATION_CHOICES)
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    text = models.TextField(verbose_name='متن')
+    created = models.DateTimeField(verbose_name='تاریخ')
+    full_name = models.CharField(max_length=200, verbose_name='نام و نام خانوادگی')
+    phone_number = models.CharField(max_length=12, verbose_name='شماره موبایل')
+    field_of_activity = models.CharField(max_length=100, choices=FIELD_OF_ACTIVITY_CHOICES, verbose_name='حوضه فعالیت')
+    activity_province = models.CharField(max_length=100, verbose_name='استان فعالیت')
+    date_of_birth = models.DateField(verbose_name='تاریخ تولد')
+    degree_of_education = models.CharField(max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES, verbose_name='میزان تحصیلات')
+    field_of_study = models.CharField(max_length=100, verbose_name='رشته تحصیلی')
+    skill = models.TextField(verbose_name='مهارت')
+    history = models.IntegerField(verbose_name='تجربه')
+    type_of_cooperation = models.CharField(max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
 
     def __str__(self):
         return self.title
@@ -43,9 +43,9 @@ class Contactus(models.Model):
         verbose_name_plural = "تماس با ما"
 
 class Aboutus(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField()
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(verbose_name='عکس')
 
     def __str__(self):
         return self.title
@@ -55,9 +55,9 @@ class Aboutus(models.Model):
         verbose_name_plural = "درباره ما"
 
 class Customer(models.Model):
-    logo = models.ImageField()
-    title = models.CharField(max_length=100)
-    description = models.TextField()
+    logo = models.ImageField(verbose_name='لوگو')
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
 
     def __str__(self):
         return self.title
@@ -68,8 +68,8 @@ class Customer(models.Model):
 
 
 class Career(models.Model):
-    image = models.ImageField()
-    description = models.TextField()
+    image = models.ImageField(verbose_name='عکس')
+    description = models.TextField(verbose_name='توضیحات')
     
     class Meta:
         verbose_name = "فرصت شغلی"
