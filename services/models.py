@@ -98,7 +98,7 @@ class Article(models.Model):
         super(Article, self).save()
 
     class Meta:
-        ordering = ('-create', '-update')
+        ordering = ('-update', '-publish')
         verbose_name = 'مقاله'
         verbose_name_plural = 'مقالات'
 
