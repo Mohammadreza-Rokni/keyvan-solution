@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, DetailView
-from .models import Customer, Contactus, Aboutus
+from django.views.generic import DetailView
+from .models import Customer, Contactus, Aboutus, Career
 from .forms import JobSeekerForm, SupplierForm
 
-class Career(TemplateView):
+class Career(DetailView):
     template_name = 'index.html'
+    model = Career
 
 class Customers(DetailView):
     template_name = 'index.html'
