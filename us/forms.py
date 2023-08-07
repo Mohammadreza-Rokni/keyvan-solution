@@ -1,11 +1,10 @@
 from django import forms
-from .models import Contactus
-
+from .models import Contactus, OTP
 
 class SupplierForm(forms.ModelForm):
     class Meta:
         model = Contactus
-        fields = ['full_name', 'phone_number', 'field_of_activity', 'activity_province']
+        fields = ['full_name', 'phone_number', 'field_of_activity', 'activity_province', 'verification_code']
 
 class JobSeekerForm(forms.ModelForm):
     class Meta:

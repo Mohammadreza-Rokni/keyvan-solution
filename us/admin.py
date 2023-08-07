@@ -6,3 +6,4 @@ from . import  models
 admin.site.register(models.Contactus)
 admin.site.register(models.Aboutus)
 admin.site.register(models.Customer)
+admin.site.register(models.OTP)
