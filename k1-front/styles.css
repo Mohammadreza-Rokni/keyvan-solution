@@ -1,40 +1,39 @@
-/* styles.css */
-
 /* Center the navigation bar horizontally and vertically at the top */
 .header {
-  width: 3176px;
-  height: 1080px;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: right; /* Center vertically */
-  height: 70px; /* Set the height of the header */
-  background-color: #f8f9fa; /* Add a background color to the header */
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #f8f9fa;
 }
 
 .nav-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style the navigation bar */
 .nav-bar {
   background-color: #ffffff;
-  width: 1700px;
-  border-radius: 70px;
+  max-width: 1700px;
+  width: 100%;
+  border-radius: 15px;
   box-shadow: 4px 4px 21px 0px #00000033;
-  display: flex; /* Use flex layout */
-  justify-content: space-between; /* Space items evenly across the main axis */
-  align-items: center; /* Center items vertically */
-  padding: 0 20px; /* Add padding to the left and right */
-  position: relative; /* Set position to relative for positioning the search icon */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 18px;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-direction: row-reverse;
 }
 
 /* Right-align navigation items */
 .nav-ul {
   display: flex;
-  flex-direction: row-reverse; /* Reverse the order of items */
+  flex-direction: row-reverse;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -43,7 +42,8 @@
 /* Style the navigation list items */
 .nav-item {
   display: inline-block;
-  margin-left: 20px; /* Add spacing between items */
+  margin-left: 20px;
+  padding-top: 10px;
 }
 
 /* Style the navigation links */
@@ -54,7 +54,12 @@
   transition: color 0.3s;
 }
 
-/* Change link color on hover */
+.logo {
+  width: 69px;
+  height: 41px;
+  padding-bottom: 15px;
+}
+
 .nav-link:hover {
   color: #ffc107;
 }
@@ -63,30 +68,37 @@
   color: #2b132b;
   height: 25px;
   width: 25px;
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 20px;
   transition: color 0.3s;
   display: inline-block;
   position: absolute;
   bottom: 10px;
-  left: 20px; /* Position at the end left */
+  left: 20px;
   order: -1; /* Change the order of the last child */
   padding-left: 20px;
 }
 
-/* Change icon color on hover */
 .search-icon:hover {
   color: #ff8c00;
 }
 
 /* customer slider */
 
+.customer-container {
+  display: inline;
+  width: 1790px;
+  height: 313px;
+  justify-content: right;
+  margin-left: 400px;
+}
+
 h2 {
   text-align: right;
   padding: 20px;
   margin-right: 20px;
 }
-/* Slider */
 
+/* Slider */
 .slick-slide {
   margin: 0px 20px;
 }
@@ -239,9 +251,9 @@ h2 {
 .square-box p {
   text-align: right;
   color: #555;
-  margin-top: 10%; /* Move the <p> element to the bottom */
+  margin-top: 10%;
   margin-right: 10%;
-  margin-bottom: 0; /* Remove margin at the bottom */
+  margin-bottom: 0;
 }
 
 .learn-more-button {
@@ -263,4 +275,51 @@ h2 {
 
 .learn-more-button:hover {
   background-color: #0056b3;
+}
+
+/* footer */
+.footer {
+  background-color: #17bba5;
+  color: #2b132b;
+  padding: 40px;
+  padding-right: 40px;
+  width: 100%;
+  height: 376px;
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.footer-column {
+  padding: 32px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.big-logo {
+  width: 337px;
+  height: 201px;
+}
+
+.footer-column.small-logo1 {
+  width: 122px;
+  height: 123px;
+}
+
+.footer-column.small-logo2 {
+  width: 154px;
+  height: 129px;
 }
