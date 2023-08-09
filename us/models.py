@@ -7,7 +7,7 @@ FIELD_OF_ACTIVITY_CHOICES = [
     ('Services available', 'Services available')
 ]
 
-DEGREE_OF_EDUCATION_CHOICES = [ 
+DEGREE_OF_EDUCATION_CHOICES = [
     ('Diploma', 'Diploma'),
     ('Associate', 'Associate'),
     ('Bachelor', 'Bachelor'),
@@ -30,27 +30,42 @@ class OTP(models.Model):
     def __str__(self):
         return self.phone
 
+
 class Contactus(models.Model):
     title = models.CharField(max_length=100, verbose_name='عنوان')
     text = models.TextField(verbose_name='متن')
     created = models.DateTimeField(verbose_name='تاریخ')
-    full_name = models.CharField(max_length=200, verbose_name='نام و نام خانوادگی')
+    full_name = models.CharField(
+        max_length=200, verbose_name='نام و نام خانوادگی')
     phone_number = models.CharField(max_length=11, verbose_name='شماره موبایل')
-    field_of_activity = models.CharField(max_length=100, choices=FIELD_OF_ACTIVITY_CHOICES, verbose_name='حوضه فعالیت')
-    activity_province = models.CharField(max_length=100, verbose_name='استان فعالیت')
+    field_of_activity = models.CharField(
+        max_length=100, choices=FIELD_OF_ACTIVITY_CHOICES, verbose_name='حوضه فعالیت')
+    activity_province = models.CharField(
+        max_length=100, verbose_name='استان فعالیت')
     date_of_birth = models.DateField(verbose_name='تاریخ تولد')
-    degree_of_education = models.CharField(max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES, verbose_name='میزان تحصیلات')
-    field_of_study = models.CharField(max_length=100, verbose_name='رشته تحصیلی')
+    degree_of_education = models.CharField(
+        max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES, verbose_name='میزان تحصیلات')
+    field_of_study = models.CharField(
+        max_length=100, verbose_name='رشته تحصیلی')
     skill = models.TextField(verbose_name='مهارت')
     history = models.IntegerField(verbose_name='تجربه')
+<<<<<<< HEAD
     type_of_cooperation = models.CharField(max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
     verification_code = models.ForeignKey(OTP, related_name='verification_code', on_delete=models.CASCADE)
+=======
+    type_of_cooperation = models.CharField(
+        max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
+    verification_code = models.ForeignKey(
+        OTP, related_name='verificatio_code', on_delete=models.CASCADE)
+>>>>>>> 4b383a5f1d9622b351510ff7964b3951936ce5b3
 
     def __str__(self):
         return self.title
+
     class Meta:
         verbose_name = "تماس با ما"
         verbose_name_plural = "تماس با ما"
+
 
 class Aboutus(models.Model):
     title = models.CharField(max_length=100, verbose_name='عنوان')
@@ -64,6 +79,7 @@ class Aboutus(models.Model):
         verbose_name = "درباره ما"
         verbose_name_plural = "درباره ما"
 
+
 class Customer(models.Model):
     logo = models.ImageField(verbose_name='لوگو')
     title = models.CharField(max_length=100, verbose_name='عنوان')
@@ -71,7 +87,7 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.title
-  
+
     class Meta:
         verbose_name = "مشتری"
         verbose_name_plural = "مشتریان"
@@ -80,9 +96,7 @@ class Customer(models.Model):
 class Career(models.Model):
     image = models.ImageField(verbose_name='عکس')
     description = models.TextField(verbose_name='توضیحات')
-    
+
     class Meta:
         verbose_name = "فرصت شغلی"
         verbose_name_plural = "فرصت های شغلی"
-
-
