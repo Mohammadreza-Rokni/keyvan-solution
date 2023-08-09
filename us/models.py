@@ -49,15 +49,9 @@ class Contactus(models.Model):
         max_length=100, verbose_name='رشته تحصیلی')
     skill = models.TextField(verbose_name='مهارت')
     history = models.IntegerField(verbose_name='تجربه')
-<<<<<<< HEAD
     type_of_cooperation = models.CharField(max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
     verification_code = models.ForeignKey(OTP, related_name='verification_code', on_delete=models.CASCADE)
-=======
-    type_of_cooperation = models.CharField(
-        max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
-    verification_code = models.ForeignKey(
-        OTP, related_name='verificatio_code', on_delete=models.CASCADE)
->>>>>>> 4b383a5f1d9622b351510ff7964b3951936ce5b3
+
 
     def __str__(self):
         return self.title
