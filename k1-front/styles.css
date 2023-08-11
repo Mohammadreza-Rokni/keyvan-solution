@@ -78,6 +78,34 @@
   color: #ff8c00;
 }
 
+.dropdown-menu li {
+  display: flex;
+  background-color: #ffffff;
+  padding: 10px;
+  min-width: 160px;
+  align-items: center; /* Center align vertically */
+  justify-content: center; /* Center align horizontally */
+  text-align: center; /* Center align text horizontally */
+  margin: 5px 0;
+  opacity: 90%;
+  border-radius: 15px, 0px, 15px, 15px;
+}
+
+.dropdown-menu a {
+  color: #2b132b;
+}
+
+.dropdown-menu a:hover {
+  color: #ff8c00;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
 /* services */
 
 .services-container {
