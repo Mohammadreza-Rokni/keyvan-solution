@@ -18,7 +18,7 @@
 }
 
 /* ===============product page=============== */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .product-container {
     height: 70vh;
     max-height: 100%;
