@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "font1";
+  src: url(fonts/anjomanfont/Anjoman-Bold.ttf) format("truetype");
+}
+
+.body {
+  font-family: "font1";
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -52,7 +61,6 @@
 .nav-logo {
   width: 69px;
   height: 41px;
-  padding-bottom: 15px;
 }
 
 .nav-link:hover {
@@ -101,6 +109,22 @@
   display: block;
 }
 
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 /* services */
 
 .services-container {
@@ -199,6 +223,7 @@
   font-weight: bold;
   text-align: center;
   padding-bottom: 15px;
+  font-family: "font1";
 }
 
 .box1 p,
@@ -453,8 +478,31 @@ h2 {
   height: auto;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
+  .footer {
+    padding-right: 0;
+  }
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+  .footer-column h3,
+  .footer-column h4 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1rem;
+  }
+
+  .small-logo {
+    width: 30%;
+  }
+
+  .big-logo {
+    margin-left: 60%;
+  }
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
   .footer {
     padding: 20px;
     text-align: center;
@@ -471,7 +519,7 @@ h2 {
   }
 
   .footer-container {
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: column;
   }
   .big-logo,
   .small-logo {
@@ -487,7 +535,7 @@ h2 {
   .small-logo {
     max-width: 70%;
   }
-}
+} */
 
 /* .site-footer {
   background-color: #f0f0f0;

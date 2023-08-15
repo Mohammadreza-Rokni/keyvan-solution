@@ -37,12 +37,13 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
     <title>Keyvan Solution</title>
   </head>
-  <body>
+
+  <body class="body">
     <header>
       <div class="nav-container">
         <div class="nav-bar">
           <ul class="nav-ul">
-            <li class="nav-item">
+            <li class="nav-item-logo">
               <a class="nav-link" href="{% url 'home:home' %}">
                 <img
                   src="images/logo/k1s_logo.png"
@@ -93,6 +94,20 @@
               <i class="fas fa-search"></i>
             </a>
           </span>
+          <button class="btn-mobile-nav">
+            <img
+              class="icon-mobile-nav"
+              name="menu-otline"
+              src="images/menu-outline.svg"
+              alt=""
+            />
+            <img
+              class="icon-mobile-nav"
+              name="close-outline"
+              src="images/close-outline.svg"
+              alt=""
+            />
+          </button>
         </div>
       </div>
     </header>
@@ -227,6 +242,72 @@
     </div>
 
     <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-1 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/keyvansafe_logo.png"
+                alt="Small Logo 1"
+                class="small-logo"
+              />
+            </div>
+          </div>
+          <div class="col-md-1 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/bazgardoon_logo.png"
+                alt="Small Logo 2"
+                class="small-logo"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>درباره ما</h3>
+              <h3>خدمات ما</h3>
+              <h3>مشتریان ما</h3>
+              <h3>بلاگ</h3>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>ارتباط با ما</h3>
+              <h4>اطلاعات تماس</h4>
+              <h4>همکاری با ما</h4>
+              <h4>موقعیت شغلی</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>راهکارهای ما</h3>
+              <h4>راهکارهای ایمنی</h4>
+              <h4>راهکارهای بهداشتی</h4>
+              <h4>راهکارهای محیط زیست</h4>
+              <h4>راهکارهای مدیریت</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>محصولات ما</h3>
+              <h4>Keyvansafe</h4>
+              <h4>Bazgardoon</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/k1s_logo.png"
+                alt="Big Logo"
+                class="big-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <img
@@ -270,7 +351,7 @@
           <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- <footer class="site-footer">
       <div class="small-logo-container">
