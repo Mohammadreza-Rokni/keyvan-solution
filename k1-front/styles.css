@@ -962,3 +962,61 @@ h2 {
   font-size: 20px;
   margin-right: 1rem;
 }
+
+/* customers */
+
+.customers-container{
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width:768px) {
+  .customers-container{
+    flex-direction: column-reverse;
+  }
+  
+}
+.scustomers-container .left-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.customers-container .left-side img {
+  max-width: 100%;
+  background-color: rgba(240, 240, 240, 0.8);
+  height: auto;
+  border-radius: 100%;
+  padding: 40px;
+}
+
+.customers-container .right-side {
+  flex: 1;
+  padding: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.customers-container .title-box {
+  /* background-color: #07362F; */
+  color: rgba(0, 0, 0, 1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+
+}
+.customers-container .title-box .title{
+  text-align: right;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.customers-container .text-box {
+  text-align: right;
+  background-color: rgba(147, 75, 148, 0.056);
+  color: #07362F;
+  padding: 35px;
+  border-radius: 10px;
+  font-size: 20px;
+}
