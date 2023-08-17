@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .btn-mobile-nav {
     display: block;
     position: absolute;
@@ -34,7 +34,7 @@
   .icon-mobile-nav[name="close-outline"] {
     display: block;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   /* responisve latest event */
