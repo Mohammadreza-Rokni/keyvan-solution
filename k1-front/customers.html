@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="script.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>مشتریان ما</title>
+  </head>
+  <body class="body">
+    <header>
+      <div class="nav-container">
+        <div class="nav-bar">
+          <ul class="nav-ul">
+            <li class="nav-item-logo">
+              <a class="nav-link" href="{% url 'home:home' %}">
+                <img
+                  src="images/logo/k1s_logo.png"
+                  alt="logo"
+                  class="nav-logo"
+                />
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">محصولات</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">مورد 1</a></li>
+                <li><a href="#">مورد 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item nav-item dropdown">
+              <a class="nav-link" href="">خدمات</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">مورد 1</a></li>
+                <li><a href="#">مورد 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">مشتریان</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="">راهکارهای ما</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">راهکارهای ایمنی</a></li>
+                <li><a href="#">راهکارهای بهداشتی</a></li>
+                <li><a href="#">راهکارهای محیط زیست</a></li>
+                <li><a href="#">راهکارهای مدیریت</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="">ارتباط با ما</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">مورد 1</a></li>
+                <li><a href="#">مورد 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">درباره ما</a>
+            </li>
+          </ul>
+          <span class="nav-item">
+            <a href="#" class="search-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div class="customers-container">
+        <div class="row align-items-start">
+           <div class="right-side col-lg-9">
+             <div class="title-box">
+               <h2 class="title">شرکت گلستان</h2>
+             </div>
+             <div class="text-box">
+               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در</p>
+             </div>
+           </div>
+            <div class="left-side col-lg-3">
+             <img src="images/logo/logo1.png" alt="عکس">
+           </div>
+          </div>
+       </div>
+       <div class="customers-container">
+        <div class="row align-items-start">
+           <div class="right-side col-lg-9">
+             <div class="title-box">
+               <h2 class="title">شرکت گلستان</h2>
+             </div>
+             <div class="text-box">
+               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در</p>
+             </div>
+           </div>
+            <div class="left-side col-lg-3">
+             <img src="images/logo/logo2.png" alt="عکس">
+           </div>
+          </div>
+       </div>
+       <div class="customers-container">
+        <div class="row align-items-start">
+           <div class="right-side col-lg-9">
+             <div class="title-box">
+               <h2 class="title">شرکت گلستان</h2>
+             </div>
+             <div class="text-box">
+               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در</p>
+             </div>
+           </div>
+            <div class="left-side col-lg-3">
+             <img src="images/logo/logo3.png" alt="عکس">
+           </div>
+          </div>
+       </div>
+       <div class="customers-container">
+        <div class="row align-items-start">
+           <div class="right-side col-lg-9">
+             <div class="title-box">
+               <h2 class="title">شرکت گلستان</h2>
+             </div>
+             <div class="text-box">
+               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در</p>
+             </div>
+           </div>
+            <div class="left-side col-lg-3">
+             <img src="images/logo/logo1.png" alt="عکس">
+           </div>
+          </div>
+       </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img
+            src="images/logo/keyvansafe_logo.png"
+            alt="Small Logo 1"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <img
+            src="images/logo/bazgardoon_logo.png"
+            alt="Small Logo 2"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <h3>درباره ما</h3>
+          <h3>خدمات ما</h3>
+          <h3>مشتریان ما</h3>
+          <h3>بلاگ</h3>
+        </div>
+        <div class="footer-column">
+          <h3>ارتباط با ما</h3>
+          <h4>اطلاعات تماس</h4>
+          <h4>همکاری با ما</h4>
+          <h4>موقعیت شغلی</h4>
+        </div>
+        <div class="footer-column">
+          <h3>راهکارهای ما</h3>
+          <h4>راهکارهای ایمنی</h4>
+          <h4>راهکارهای بهداشتی</h4>
+          <h4>راهکارهای محیط زیست</h4>
+          <h4>راهکارهای مدیریت</h4>
+        </div>
+        <div class="footer-column">
+          <h3>محصولات ما</h3>
+          <h4>Keyvansafe</h4>
+          <h4>Bazgardoon</h4>
+        </div>
+        <div class="footer-column">
+          <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
