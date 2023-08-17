@@ -857,6 +857,7 @@ body {
 }
 .service-container .title-box .title{
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .service-container .text-box {
@@ -900,6 +901,7 @@ body {
 .service-container-reverse .title-box .title{
   text-align: left;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .service-container-reverse .text-box {
