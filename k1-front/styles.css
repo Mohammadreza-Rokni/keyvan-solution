@@ -862,20 +862,21 @@ h2 {
   color: rgba(51, 51, 51, 1);
 }
 
-
-
 /* .services-container */
 
 .service-container {
   display: flex;
   align-items: center;
   padding: 5%;
-  
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .service-container .left-side {
   flex: 1;
   padding: 20px;
+  padding-right: 0;
+  text-align: right;
 }
 
 .service-container .left-side img {
@@ -886,40 +887,45 @@ h2 {
 .service-container .right-side {
   flex: 1;
   padding: 20px;
+  padding-left: 0;
 }
 
 .service-container .title-box {
-  background-color: #07362F;
+  background-color: #07362f;
   color: #ffffff;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-right: 50%;
 }
-.service-container .title-box .title{
+.service-container .title-box .title {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
 .service-container .text-box {
+  height: auto;
   text-align: right;
   background-color: #17bba522;
-  color: #07362F;
-  padding: 10px;
+  color: #07362f;
+  padding: 3.6rem;
   border-radius: 5px;
   font-size: 20px;
+  margin-left: 1rem;
 }
 
 .service-container-reverse {
   display: flex;
   align-items: center;
   padding: 5%;
-  
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .service-container-reverse .left-side {
   flex: 1;
   padding: 20px;
+  padding-left: 0;
 }
 
 .service-container-reverse .left-side img {
@@ -930,26 +936,29 @@ h2 {
 .service-container-reverse .right-side {
   flex: 1;
   padding: 20px;
+  padding-right: 0;
 }
 .service-container-reverse .title-box {
-  background-color: #07362F;
+  background-color: #07362f;
   color: #ffffff;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 50%;
 }
-.service-container-reverse .title-box .title{
+.service-container-reverse .title-box .title {
   text-align: left;
   font-size: 20px;
   margin-bottom: 20px;
 }
 
 .service-container-reverse .text-box {
+  height: auto;
   text-align: right;
   background-color: #17bba522;
-  color: #07362F;
-  padding: 10px;
+  color: #07362f;
+  padding: 3.6rem;
   border-radius: 5px;
   font-size: 20px;
+  margin-right: 1rem;
 }
