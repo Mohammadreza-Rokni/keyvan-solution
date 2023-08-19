@@ -313,3 +313,61 @@
     font-size: 1rem;
   }
 }
+
+/* ===============services page=============== */
+@media (max-width: 1000px) {
+  .service-container,
+  .service-container-reverse {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .service-container .row,
+  .service-container-reverse .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-container-reverse .row {
+    flex-direction: column-reverse;
+  }
+
+  .service-container .left-side,
+  .service-container-reverse .left-side,
+  .service-container .right-side,
+  .service-container-reverse .right-side {
+    flex: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .service-container-reverse .title-box {
+    margin-left: 0;
+  }
+
+  .service-container .title-box {
+    margin-right: 0;
+  }
+
+  .service-container-reverse .title-box .title,
+  .service-container .title-box .title {
+    text-align: center;
+  }
+
+  .service-container-reverse .text-box,
+  .service-container .text-box {
+    margin-right: 0;
+  }
+}
+
+/* ==============customer page============== */
+
+@media (max-width: 768px) {
+  .customers-container {
+    flex-direction: column-reverse;
+  }
+}
+.scustomers-container .left-side {
+  flex: 1;
+  padding: 20px;
+}
