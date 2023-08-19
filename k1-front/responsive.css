@@ -371,3 +371,15 @@
   flex: 1;
   padding: 20px;
 }
+
+/* =================solutions page ================= */
+
+@media (max-width: 1000px) {
+  .first-item {
+    flex-direction: column-reverse;
+  }
+
+  .col-lg-4 {
+    width: 100%;
+  }
+}
