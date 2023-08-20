@@ -953,42 +953,6 @@ h2 {
   margin-right: 1rem;
 }
 
-@media (max-width: 1000px) {
-  .service-container .row,
-  .service-container-reverse .row {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .service-container-reverse .row {
-    flex-direction: column-reverse;
-  }
-
-  .service-container .left-side,
-  .service-container-reverse .left-side,
-  .service-container .right-side,
-  .service-container-reverse .right-side {
-    flex: none;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .service-container-reverse .title-box {
-    margin-left: 0;
-  }
-
-  .service-container-reverse .title-box .title {
-    text-align: center;
-  }
-
-  .service-container .title-box {
-    margin-right: 0;
-  }
-
-  .service-container .title-box .title {
-    text-align: center;
-  }
-}
 /* customers */
 
 .customers-container {
@@ -998,17 +962,7 @@ h2 {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-@media (max-width: 1000px) {
-  .customers-container .row {
-    flex-direction: column-reverse;
-  }
-  .customers-container .left-side {
-    text-align: center;
-  }
-  .customers-container .title-box .title {
-    text-align: center;
-  }
-}
+
 /* .scustomers-container .left-side {
   flex: 1;
   padding: 20px;
@@ -1116,4 +1070,37 @@ h2 {
   padding: 35px;
   border-radius: 10px;
   font-size: 20px;
+}
+
+/* =============== contact us page =============== */
+
+.contactus {
+  background-color: #dafffa;
+  margin: 3rem 6rem;
+}
+
+.rtl-text {
+  direction: rtl;
+  text-align: right;
+}
+
+.google-maps {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.google-maps iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contacts-title {
+  padding: 1rem;
+  font-size: 38px;
+}
+
+.contacts-item {
+  padding: 1rem;
+  font-size: 28px;
 }

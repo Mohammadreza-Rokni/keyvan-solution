@@ -372,6 +372,18 @@
   padding: 20px;
 }
 
+@media (max-width: 1000px) {
+  .customers-container .row {
+    flex-direction: column-reverse;
+  }
+  .customers-container .left-side {
+    text-align: center;
+  }
+  .customers-container .title-box .title {
+    text-align: center;
+  }
+}
+
 /* =================solutions page ================= */
 
 @media (max-width: 1000px) {
@@ -381,5 +393,28 @@
 
   .col-lg-4 {
     width: 100%;
+  }
+}
+
+/* ================== contact us page ==================  */
+
+@media (max-width: 991px) {
+  .contactus {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .google-maps iframe {
+    height: 300px;
+  }
+
+  .contacts-title {
+    padding: 1rem;
+    font-size: 18px;
+  }
+
+  .contacts-item {
+    padding: 1rem;
+    font-size: 12px;
   }
 }
