@@ -418,3 +418,36 @@
     font-size: 12px;
   }
 }
+
+/* ================== about us page ==================  */
+
+@media (max-width: 1000px) {
+  .general-view {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+
+  .general-view-box {
+    text-align: center;
+  }
+
+  .general-view-title {
+    text-align: center;
+  }
+
+  .first-aboutus {
+    flex-direction: column-reverse;
+  }
+
+  .aboutus-container .text-box {
+    padding: 30px 0;
+  }
+
+  .aboutus-container .text-box .title {
+    text-align: center;
+  }
+
+  .aboutus-image {
+    width: auto;
+  }
+}
