@@ -1005,14 +1005,14 @@ h2 {
   font-size: 20px;
 }
 
-.customers {
+.titles {
   display: flex;
   align-items: center;
   padding: 5%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.customers .title-box {
+.titles .title-box {
   background-color: rgba(147, 75, 148, 1);
   color: #ffffff;
   padding: 10px;
@@ -1020,7 +1020,7 @@ h2 {
   margin-bottom: 20px;
   text-align: center;
 }
-.customers .title-box .title {
+.titles .title-box .title {
   text-align: center;
   font-size: 35px;
   margin-bottom: 20px;
@@ -1103,4 +1103,28 @@ h2 {
 .contacts-item {
   padding: 1rem;
   font-size: 28px;
+}
+
+/* .job-container */
+
+.job-container {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.job-container .title-box {
+  background-color:#F0F0F0;
+  color: #000000;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.job-container .title-box .title {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
