@@ -1008,14 +1008,14 @@ h2 {
   font-size: 20px;
 }
 
-.customers {
+.titles {
   display: flex;
   align-items: center;
   padding: 5%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.customers .title-box {
+.titles .title-box {
   background-color: rgba(147, 75, 148, 1);
   color: #ffffff;
   padding: 10px;
@@ -1023,7 +1023,7 @@ h2 {
   margin-bottom: 20px;
   text-align: center;
 }
-.customers .title-box .title {
+.titles .title-box .title {
   text-align: center;
   font-size: 35px;
   margin-bottom: 20px;
@@ -1189,4 +1189,64 @@ h2 {
   margin-bottom: 10px;
   width: auto;
   height: auto;
+}
+
+/* .job-container */
+
+.job-container {
+  align-items: center;
+  padding: 6%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.job-container .title-box {
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: 10px;
+  border: 8px solid black;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.job-container .title-box .title {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+/* ======without-job-container======= */
+
+.without-job-container {
+  align-items: center;
+  padding: 9%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.without-job-container .side {
+  flex: 1;
+  padding: 20px;
+  padding-right: 0;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.without-job-container .side img {
+  max-width: 100%;
+  height: auto;
+}
+.without-job-container .title-box {
+  /* background-color:#F0F0F0; */
+  color: #934b94;
+  padding: 10px;
+  /* border: 8px solid black;  */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.without-job-container .title-box .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 38px;
+  margin-bottom: 20px;
 }
