@@ -1108,18 +1108,19 @@ h2 {
 /* .job-container */
 
 .job-container {
-  display: flex;
   align-items: center;
-  padding: 5%;
+  padding: 6%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
 
 .job-container .title-box {
   background-color:#F0F0F0;
   color: #000000;
   padding: 10px;
-  border-radius: 20px;
+  border: 8px solid black; 
+  border-radius: 15px;
   margin-bottom: 20px;
   text-align: center;
 }
