@@ -1129,3 +1129,39 @@ h2 {
   font-size: 35px;
   margin-bottom: 20px;
 }
+
+/* ======without-job-container======= */
+
+.without-job-container {
+  align-items: center;
+  padding: 9%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.without-job-container .side {
+  flex: 1;
+  padding: 20px;
+  padding-right: 0;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.without-job-container .side img {
+  max-width: 100%;
+  height: auto;
+}
+.without-job-container .title-box {
+  /* background-color:#F0F0F0; */
+  color: #934B94;
+  padding: 10px;
+  /* border: 8px solid black;  */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.without-job-container .title-box .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 38px ;
+  margin-bottom: 20px;
+}
