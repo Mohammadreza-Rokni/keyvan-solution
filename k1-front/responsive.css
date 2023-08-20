@@ -451,3 +451,20 @@
     width: auto;
   }
 }
+
+/* =============== job detail page =============== */
+@media (max-width: 1000px) {
+  .jobpostitle .title-box .title {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .upload-row {
+    flex-direction: column-reverse;
+  }
+
+  .job-upload-container .send-button {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
