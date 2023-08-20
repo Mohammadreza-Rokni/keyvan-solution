@@ -55,7 +55,7 @@
   }
 }
 
-/* ===============product page=============== */
+/* =============== product page =============== */
 @media (min-width: 1200px) {
   .product-container {
     height: 70vh;
@@ -89,7 +89,7 @@
   }
 }
 
-/* ===============additional-sections=============== */
+/* =============== additional-sections =============== */
 
 @media screen and (max-width: 767px) {
   .product-image,
@@ -314,7 +314,7 @@
   }
 }
 
-/* ===============services page=============== */
+/* =============== services page =============== */
 @media (max-width: 1000px) {
   .service-container,
   .service-container-reverse {
