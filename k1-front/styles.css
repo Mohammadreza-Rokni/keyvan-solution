@@ -983,7 +983,6 @@ h2 {
   padding-left: 0px;
 }
 .customers-container .title-box {
-  /* background-color: #07362F; */
   color: rgba(0, 0, 0, 1);
   padding: 10px;
   border-radius: 5px;
@@ -1004,7 +1003,6 @@ h2 {
   border-radius: 10px;
   font-size: 20px;
 }
-
 .titles {
   display: flex;
   align-items: center;
@@ -1151,10 +1149,8 @@ h2 {
   height: auto;
 }
 .without-job-container .title-box {
-  /* background-color:#F0F0F0; */
   color: #934B94;
   padding: 10px;
-  /* border: 8px solid black;  */
   border-radius: 15px;
   margin-bottom: 20px;
   text-align: center;
@@ -1164,4 +1160,96 @@ h2 {
   font-weight: bold;
   font-size: 38px ;
   margin-bottom: 20px;
+}
+.jobpostitle {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.jobpostitle .title-box {
+  background-color: rgba(147, 75, 148, 0.287);
+  color: #2B132B;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.jobpostitle .title-box .title {
+  text-align: right;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+/* job-detail-container */
+
+.job-detail-container {
+  display: flex;
+  align-items: center;
+  padding: 8%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.job-detail-container .right-side {
+  flex: 1;
+  /* padding: 20px; */
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.job-detail-container .title-box {
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+}
+.job-detail-container .title-box .title {
+  text-align: right;
+  font-size: 40px;
+}
+
+.job-detail-container .text-box {
+  text-align: right;
+  color: #07362f;
+  padding: 35px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+
+.divider {
+  width: 50%;
+  border: 2px solid rgb(3, 3, 3);
+  clear: both;
+  margin: 0 auto; 
+}
+
+.job-upload-container {
+  align-items: center;
+  padding: 9%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.job-upload-container .image {
+  flex: 1;
+  background-color: rgba(147, 75, 148, 1);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  /* padding-right: 0; */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.job-upload-container .image img {
+  max-width: 100%;
+  height: auto;
+}
+.job-upload-container .title-box .title{
+  text-align: center;
+  font-size: 30px;
+
 }
