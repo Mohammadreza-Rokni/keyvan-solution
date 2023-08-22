@@ -211,19 +211,19 @@
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item" data-bs-interval="10000">
+          <div class="carousel-item background1" data-bs-interval="10000">
             <img src="images/slider.png" class="d-block w-100" alt="">
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
             </div>
           </div>
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img src="images/slider.png" class="d-block w-10" alt="">
+          <div class="carousel-item background2 active" data-bs-interval="2000">
+            <img src="images/slider.png" class="d-block w-100" alt=""> <h5>Second slide label</h5>
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item background3">
             <img src="images/slider.png" class="d-block w-100" alt="">
            <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
@@ -520,6 +520,16 @@
       <div class="big-logo-container">
         <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
       </div>
+      
     </footer> -->
+    <script>
+       function changeSlide() {
+        const nextButton = document.querySelector('.carousel-control-next');
+        nextButton.click(); // Simulate click on the "Next" button
+      }
+
+      // Start changing slides after 1 second
+      setInterval(changeSlide, 3000);
+    </script>
   </body>
 </html>

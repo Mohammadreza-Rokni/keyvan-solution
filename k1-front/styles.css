@@ -233,15 +233,36 @@
     box-shadow: none;
   }
 } */
-.carousel{
+/* .carousel{ */
   /* margin-top: 80px; */
+  /* padding: 10%; */
+
+/* } */
+.background1{
   padding: 10%;
-  background-image: url(images/slider.png) ;
+  background-image: url(images/backslider.png) ;
   background-size: 2000px;
   /* filter: blur(80); */
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
+.background2{
+  padding: 10%;
+  background-image: url(images/backslider.png) ;
+  background-size: 2000px;
+  /* filter: blur(80); */
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+}
+.background3{
+  padding: 10%;
+  background-image: url(images/backslider.png) ;
+  background-size: 2000px;
+  /* filter: blur(80); */
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+}
+
 /* .contacts-inner{
 
 } */
