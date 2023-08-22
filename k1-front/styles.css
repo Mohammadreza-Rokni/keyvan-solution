@@ -238,6 +238,14 @@
   /* padding: 10%; */
 
 /* } */
+.carousel-item .carousel-caption h5{
+  /* position: absolute; */
+  margin-bottom:350px;
+  text-align: right;
+  /* font-size: 80px; */
+  /* font-weight: bold; */
+  color:#ffffff ;
+}
 .background1{
   padding: 10%;
   background-image: url(images/backslider.png) ;
