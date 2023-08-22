@@ -24,6 +24,12 @@ $(document).ready(function () {
   });
 });
 
+function changeSlide() {
+  const nextButton = document.querySelector(".carousel-control-next");
+  nextButton.click();
+}
+setInterval(changeSlide, 3000);
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const filterDropdown = document.getElementById("filterDropdown");
 //   const filterItems = document.querySelectorAll(".filter-item");

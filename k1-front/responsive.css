@@ -36,9 +36,13 @@
   }
 } */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .titles .title-box .title {
+    font-size: 20px;
+  }
+
   h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .elements {
@@ -46,6 +50,7 @@
     flex-direction: column;
     padding: 10px;
   }
+
   /* responisve latest event */
 
   .latest-events {
@@ -89,7 +94,7 @@
     /* height: 90%; */
     border-radius: 50px;
     padding: 10px;
-    min-height: 500px;
+    min-height: 420px;
   }
 
   .box1 img,
@@ -372,7 +377,7 @@
   }
 }
 
-/* ==============customer page============== */
+/* ============== customer page ============== */
 
 @media (max-width: 768px) {
   .customers-container {
@@ -396,7 +401,7 @@
   }
 }
 
-/* =================solutions page ================= */
+/* ================= solutions page ================= */
 
 @media (max-width: 1000px) {
   .first-item {
@@ -465,10 +470,22 @@
 }
 
 /* =============== job detail page =============== */
+
+@media (max-width: 768px) {
+  .job-detail-container {
+    padding: 25px;
+  }
+
+  .job-detail-container .text-box {
+    padding: 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .jobpostitle .title-box .title {
     text-align: center;
     margin-right: 0;
+    font-size: 20px;
   }
 
   .upload-row {
