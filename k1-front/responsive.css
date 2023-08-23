@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 768px) {
+  .solutions-container .title-box .title,
+  .without-job-container .title-box .title,
+  .job-container .title-box .title,
   .titles .title-box .title {
     font-size: 20px;
   }
@@ -427,6 +430,10 @@
 /* ================= solutions page ================= */
 
 @media (max-width: 1000px) {
+  .solutions-container .text-box p{
+    font-size: 14px;
+    text-align: right;
+  }
   .first-item {
     flex-direction: column-reverse;
   }
@@ -527,6 +534,7 @@
 }
 
 @media (max-width: 1000px) {
+  /* .titles .text-box .title, */
   .jobpostitle .title-box .title {
     text-align: center;
     margin-right: 0;
