@@ -364,14 +364,17 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
+  /* .first-item  {
+    flex-direction: column-reverse;
+  } */
+/* 
   .service-container .row,
   .service-container-reverse .row {
     display: flex;
-    flex-direction: column;
-  }
+    flex-direction: column; 
+  } */
 
-  .service-container-reverse .row {
+  .service-container .row {
     flex-direction: column-reverse;
   }
 
@@ -521,7 +524,7 @@
   }
 }
 
-/* =============== job detail page =============== */
+/* =============== job detail page , not job =============== */
 
 @media (max-width: 768px) {
   .job-detail-container {
@@ -535,6 +538,9 @@
 
 @media (max-width: 1000px) {
   /* .titles .text-box .title, */
+  .without-job-container .row {
+    flex-direction: column-reverse;
+  }
   .jobpostitle .title-box .title {
     text-align: center;
     margin-right: 0;
