@@ -70,7 +70,7 @@
   margin-top: 18px;
   margin-left: 5%;
   margin-right: 5%;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .navbar .container-fluid {
@@ -86,7 +86,7 @@
 
 .nav-ul {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -347,6 +347,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  direction: ltr;
 }
 
 .element1 {
@@ -426,6 +427,7 @@
   width: auto;
   height: auto;
   padding-bottom: 1rem;
+  text-align: justify;
 }
 
 /* customer slider */
@@ -485,6 +487,7 @@ h2 {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  direction: ltr;
 }
 .slick-list:focus {
   outline: none;
@@ -578,7 +581,7 @@ h2 {
 
 .square-box {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   align-items: center;
   width: calc(50% - 40px);
   max-width: 820px;
