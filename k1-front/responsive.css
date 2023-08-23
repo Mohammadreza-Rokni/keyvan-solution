@@ -364,15 +364,6 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  /* .first-item  {
-    flex-direction: column-reverse;
-  } */
-/* 
-  .service-container .row,
-  .service-container-reverse .row {
-    display: flex;
-    flex-direction: column; 
-  } */
 
   .service-container .row {
     flex-direction: column-reverse;
@@ -403,39 +394,41 @@
   .service-container-reverse .text-box,
   .service-container .text-box {
     margin-right: 0;
+    text-align: justify;
+    padding: 1rem;
+  }
+
+  .service-container .right-side .text-box {
+    margin: 0;
   }
 }
 
 /* ============== customer page ============== */
 
-@media (max-width: 768px) {
-  .customers-container {
-    flex-direction: column-reverse;
-  }
-}
-.scustomers-container .left-side {
-  flex: 1;
-  padding: 20px;
-}
-
 @media (max-width: 1000px) {
-  .customers-container .row {
-    flex-direction: column-reverse;
-  }
   .customers-container .left-side {
     text-align: center;
   }
+
   .customers-container .title-box .title {
     text-align: center;
+  }
+
+  .customers-container .text-box {
+    padding: 1rem;
   }
 }
 
 /* ================= solutions page ================= */
 
 @media (max-width: 1000px) {
-  .solutions-container .text-box p{
+  .solutions-container .text-box {
+    padding: 1rem;
+  }
+
+  .solutions-container .text-box p {
     font-size: 14px;
-    text-align: right;
+    text-align: justify;
   }
   .first-item {
     flex-direction: column-reverse;
@@ -477,7 +470,6 @@
   }
 
   .question-row {
-    flex-direction: column-reverse;
     margin: 0.5rem;
   }
 
@@ -507,7 +499,7 @@
     text-align: center;
   }
 
-  .first-aboutus {
+  .second-aboutus {
     flex-direction: column-reverse;
   }
 
@@ -534,6 +526,10 @@
   .job-detail-container .text-box {
     padding: 0;
   }
+
+  .job-detail-container .text-box p {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -553,6 +549,26 @@
 
   .job-upload-container .send-button {
     margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+/* =============== blog =============== */
+
+@media (max-width: 768px) {
+  .latest-title {
+    font-size: 28px;
+  }
+  .latest-divider {
+    width: 50%;
+    border: 2px solid;
+  }
+}
+
+/* =============== blog detail =============== */
+
+@media (max-width: 768px) {
+  .blog-detail-container .text-box {
     padding: 1rem;
   }
 }
