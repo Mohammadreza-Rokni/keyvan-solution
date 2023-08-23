@@ -9,9 +9,9 @@
   overflow-x: hidden;
 }
 
-.titles {
+/* .titles {
   margin-top: 60px;
-}
+} */
 /* loding page */
 
 
@@ -53,12 +53,7 @@
     100% { transform: rotate(360deg); }
 }
 
-.content {
-    display: none; /* Content is initially hidden */
-}
-.navbar {
-  display: block; /* Initial state: visible */
-}
+
 
 /* =============== home page ============== */
 
@@ -720,7 +715,7 @@ h2 {
   text-align: center;
   max-width: 1180px;
   width: 100%;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
 }
 
 .product-description p {
@@ -744,6 +739,7 @@ h2 {
   margin-left: 6%;
   margin-bottom: 3%;
   padding: 15px;
+  margin-top: 50px;
   background-color: rgba(106, 105, 171, 0.1);
   border-radius: 15px;
   margin-right: 80px;
@@ -850,7 +846,7 @@ h2 {
   width: 75%;
   border: 3px solid rgba(106, 105, 171, 1);
   clear: both;
-  margin-left: 0;
+  margin-right: auto;
 }
 
 .section-divider-reverse {
@@ -1064,7 +1060,7 @@ h2 {
   display: flex;
   align-items: center;
   padding: 5%;
-  padding-top: 40px;
+  padding-top: 120px;
   padding-bottom: 40px;
 }
 
@@ -1398,7 +1394,7 @@ h2 {
 }
 
 .jobpostitle {
-  margin-top: 50px;
+  padding-top: 120px;
 }
 
 .job-detail-container .title-box {
