@@ -54,7 +54,12 @@
   </head>
 
   <body class="body">
-    <header>
+    <div class="loading-screen">
+      <div class="loading-icon">
+          <img src="images/logo/k1s_logo.png" alt="Your Logo" class="logo">
+      </div>
+  </div>
+  <header style="display: none;"> 
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <button
@@ -142,7 +147,65 @@
           </div>
         </div>
       </nav>
-
+      <!-- <div class="nav-container container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="nav-bar " id="navbarTogglerDemo01">
+            <ul class="nav-ul">
+              <li class="nav-item-logo">
+                <a class="nav-link" href="{% url 'home:home' %}">
+                  <img
+                    src="images/logo/k1s_logo.png"
+                    alt="logo"
+                    class="nav-logo"
+                  />
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">محصولات</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item dropdown">
+                <a class="nav-link" href="">خدمات</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">مشتریان</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="">راهکارهای ما</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">راهکارهای ایمنی</a></li>
+                  <li><a href="#">راهکارهای بهداشتی</a></li>
+                  <li><a href="#">راهکارهای محیط زیست</a></li>
+                  <li><a href="#">راهکارهای مدیریت</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="">ارتباط با ما</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">درباره ما</a>
+              </li>
+            </ul>
+            <span class="nav-item">
+              <a href="#" class="search-icon">
+                <i class="fas fa-search"></i>
+              </a>
+            </span>
+          </div>
+      </div> -->
       <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
           <button
@@ -332,6 +395,47 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="row">
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/k1s_logo.png"
+                alt="Big Logo"
+                class="big-logo"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>محصولات ما</h3>
+              <h4>Keyvansafe</h4>
+              <h4>Bazgardoon</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>راهکارهای ما</h3>
+              <h4>راهکارهای ایمنی</h4>
+              <h4>راهکارهای بهداشتی</h4>
+              <h4>راهکارهای محیط زیست</h4>
+              <h4>راهکارهای مدیریت</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>ارتباط با ما</h3>
+              <h4>اطلاعات تماس</h4>
+              <h4>همکاری با ما</h4>
+              <h4>موقعیت شغلی</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>درباره ما</h3>
+              <h3>خدمات ما</h3>
+              <h3>مشتریان ما</h3>
+              <h3>بلاگ</h3>
+            </div>
+          </div>
           <div class="col-md-1 col-6">
             <div class="footer-column">
               <img
@@ -350,49 +454,103 @@
               />
             </div>
           </div>
-          <div class="col-md-2 col-6">
-            <div class="footer-column">
+        </div>
+      </div>
+    </footer>
+
+    <!-- <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img
+            src="images/logo/keyvansafe_logo.png"
+            alt="Small Logo 1"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <img
+            src="images/logo/bazgardoon_logo.png"
+            alt="Small Logo 2"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <h3>درباره ما</h3>
+          <h3>خدمات ما</h3>
+          <h3>مشتریان ما</h3>
+          <h3>بلاگ</h3>
+        </div>
+        <div class="footer-column">
+          <h3>ارتباط با ما</h3>
+          <h4>اطلاعات تماس</h4>
+          <h4>همکاری با ما</h4>
+          <h4>موقعیت شغلی</h4>
+        </div>
+        <div class="footer-column">
+          <h3>راهکارهای ما</h3>
+          <h4>راهکارهای ایمنی</h4>
+          <h4>راهکارهای بهداشتی</h4>
+          <h4>راهکارهای محیط زیست</h4>
+          <h4>راهکارهای مدیریت</h4>
+        </div>
+        <div class="footer-column">
+          <h3>محصولات ما</h3>
+          <h4>Keyvansafe</h4>
+          <h4>Bazgardoon</h4>
+        </div>
+        <div class="footer-column">
+          <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- <footer class="site-footer">
+      <div class="small-logo-container">
+        <img src="images/logo/keyvansafe_logo.png" alt="Logo 1" class="logo" />
+        <img src="images/logo/bazgardoon_logo.png" alt="Logo 2" class="logo" />
+      </div>
+      <div class="footer-box">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <ul>
+              <h3>درباره ما</h3>
               <h3>درباره ما</h3>
               <h3>خدمات ما</h3>
               <h3>مشتریان ما</h3>
               <h3>بلاگ</h3>
-            </div>
+            </ul>
           </div>
-          <div class="col-md-2 col-6">
-            <div class="footer-column">
+          <div class="footer-column">
+            <ul>
               <h3>ارتباط با ما</h3>
-              <h4>اطلاعات تماس</h4>
-              <h4>همکاری با ما</h4>
-              <h4>موقعیت شغلی</h4>
-            </div>
+              <li>اطلاعات تماس</li>
+              <li>همکاری با ما</li>
+              <li>موقعیت شغلی</li>
+            </ul>
           </div>
-          <div class="col-md-2 col-6">
-            <div class="footer-column">
+          <div class="footer-column">
+            <ul>
               <h3>راهکارهای ما</h3>
-              <h4>راهکارهای ایمنی</h4>
-              <h4>راهکارهای بهداشتی</h4>
-              <h4>راهکارهای محیط زیست</h4>
-              <h4>راهکارهای مدیریت</h4>
-            </div>
+              <li>راهکارهای ایمنی</li>
+              <li>راهکاری های بهداشتی</li>
+              <li>راهکارهای محیط زیست</li>
+              <li>راهکارهای مدیریت</li>
+            </ul>
           </div>
-          <div class="col-md-2 col-6">
-            <div class="footer-column">
+          <div class="footer-column">
+            <ul>
               <h3>محصولات ما</h3>
-              <h4>Keyvansafe</h4>
-              <h4>Bazgardoon</h4>
-            </div>
-          </div>
-          <div class="col-md-2 col-12">
-            <div class="footer-column">
-              <img
-                src="images/logo/k1s_logo.png"
-                alt="Big Logo"
-                class="big-logo"
-              />
-            </div>
+              <li>keyvanSafe</li>
+              <li>Bazgardoon</li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="big-logo-container">
+        <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
+      </div>
+      
+    </footer> -->
+    <script></script>
   </body>
 </html>
