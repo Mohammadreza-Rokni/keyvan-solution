@@ -7,7 +7,6 @@ from . import models
 
 
 admin.site.register(models.Article)
-admin.site.register(models.Category)
 admin.site.register(models.Ourproducts)
 admin.site.register(models.Ourservices)
 admin.site.register(models.Oursolutions)

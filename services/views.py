@@ -1,54 +1,52 @@
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import DetailView, ListView, TemplateView
-from .models import Oursolutions, Ourservices, Ourproducts, Article, Category
+from django.views.generic import DetailView, ListView
+from .models import Oursolutions, Ourservices, Ourproducts, Article
 # Create your views here.
 
 
 class ArticleListView(ListView):
     model = Article
+    template_name = 'blog.html'
     context_object_name = "articles"
-    paginate_by = 4
+    paginate_by = 6
 
 
 class ArticleDetailView(DetailView):
-    template_name = 'index.html'
+    template_name = 'blog_detail.html'
     model = Article
 
-
-def category_detail(request, pk=None):
-    category = get_object_or_404(Category, id=pk)
-    articles = category.articles.all()
-    return render(request, 'index.html', {'articles': articles})
 
 
 class OurSolutionsListView(ListView):
     model = Oursolutions
+    template_name = 'solutions.html'
     context_object_name = "oursolutions"
-    paginate_by = 4
 
 
-class OurSolutionsDetailView(DetailView):
-    template_name = 'index.html'
-    model = Oursolutions
+
+# class OurSolutionsDetailView(DetailView):
+#     template_name = 'index.html'
+#     model = Oursolutions
 
 
 class OurServicesListView(ListView):
     model = Ourservices
+    template_name = 'services.html'
     context_object_name = "ourservices"
-    paginate_by = 4
 
 
-class OurServicesDetailView(DetailView):
-    template_name = 'index.html'
-    model = Ourservices
+# class OurServicesDetailView(DetailView):
+#     template_name = 'index.html'
+#     model = Ourservices
 
 
 class OurProductsListView(ListView):
     model = Ourproducts
+    template_name = 'product.html'
     context_object_name = "ourproducts"
-    paginate_by = 4
 
 
-class OurProductsDetailView(DetailView):
-    template_name = 'index.html'
-    model = Ourproducts
+
+# class OurProductsDetailView(DetailView):
+#     template_name = 'index.html'
+#     model = Ourproducts

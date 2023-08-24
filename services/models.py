@@ -4,19 +4,9 @@ from django.utils.text import slugify
 
 # Create your models here.
 class Oursolutions(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    description = models.TextField(verbose_name='توضیحات')
-    image = models.ImageField(verbose_name='عکس')
-    slug = models.SlugField(blank=True, unique=True)
-
-    def save(
-            self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
-        self.slug = slugify(self.title)
-        super(Oursolutions, self).save()
-
-    def get_absolute_url(self):
-        return reverse('html_page', kwargs={'slug': self.slug})
+    title = models.CharField(max_length=100, null=False, blank=False, verbose_name='عنوان')
+    description = models.TextField(null=False, blank=False, verbose_name='توضیحات')
+    image = models.ImageField(null=False, blank=False, verbose_name='عکس')
 
     def __str__(self):
         return self.title
@@ -26,69 +16,38 @@ class Oursolutions(models.Model):
         verbose_name_plural = "راهکارهای ما"
 
 class Ourservices(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    description = models.TextField(verbose_name='توضیحات')
-    image = models.ImageField(verbose_name='عکس')
-    slug = models.SlugField(blank=True, unique=True)
+    title = models.CharField(max_length=100, null=False, blank=False, verbose_name='عنوان')
+    description = models.TextField(null=False, blank=False, verbose_name='توضیحات')
+    image = models.ImageField(null=False, blank=False, verbose_name='عکس')
 
     def __str__(self):
         return self.title
-    
-    def save(
-            self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
-        self.slug = slugify(self.title)
-        super(Ourservices, self).save()
-
-    def get_absolute_url(self):
-        return reverse('html_page', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = "خدمات ما"
         verbose_name_plural = "خدمات ما"
 
 class Ourproducts(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    description = models.TextField(verbose_name='توضیحات')
-    image = models.ImageField(verbose_name='عکس')
-    slug = models.SlugField(blank=True, unique=True)
+    title = models.CharField(max_length=100, null=False, blank=False, verbose_name='عنوان')
+    description = models.TextField(null=False, blank=False, verbose_name='توضیحات')
+    image = models.ImageField(null=False, blank=False, verbose_name='عکس')
 
     def __str__(self):
         return self.title
-    
-    def save(
-            self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
-        self.slug = slugify(self.title)
-        super(Ourproducts, self).save()
 
-    def get_absolute_url(self):
-        return reverse('html_page', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = "محصولات ما"
         verbose_name_plural = "محصولات ما"
 
 
-class Category(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    created = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'دسته بندی'
-        verbose_name_plural = 'دسته بندی ها'
-
 
 class Article(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    description = models.TextField(verbose_name='توضیحات')
-    image = models.ImageField(verbose_name='عکس')
+    title = models.CharField(null=False, blank=False, max_length=100, verbose_name='عنوان')
+    description = models.TextField(null=False, blank=False, verbose_name='توضیحات')
+    image = models.ImageField(null=False, blank=False, verbose_name='عکس')
     publish = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ انتشار')
     update = models.DateTimeField(auto_now=True, verbose_name='تاریخ بروزسانی')
-    Category = models.ManyToManyField(Category, related_name='articles', verbose_name='دسته بندی')
     slug = models.SlugField(blank=True, unique=True)
 
     def save(
