@@ -33,6 +33,7 @@ class Career(DetailView):
 class CustomersView(ListView):
     template_name = 'customers.html'
     model = Customer
+    context_object_name = 'customers'
 
 
 class ContactUsView(ListView):
