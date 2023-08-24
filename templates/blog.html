@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
   <head>
@@ -12,8 +13,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}" />
     <script
       src="https://code.jquery.com/jquery-2.2.0.min.js"
       type="text/javascript"
@@ -42,7 +43,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     /> -->
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
     <meta charset="UTF-8" />
     <meta
@@ -56,10 +57,10 @@
   <body class="body">
     <div class="loading-screen">
       <div class="loading-icon">
-          <img src="images/logo/k1s_logo.png" alt="Your Logo" class="logo">
+        <img src="{% static 'images/logo/k1s_logo.png' %}" alt="Your Logo" class="logo" />
       </div>
-  </div>
-  <header style="display: none;"> 
+    </div>
+    <header style="display: none">
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <button
@@ -75,7 +76,7 @@
           </button>
           <a class="nav-link" href="{% url 'home:home' %}">
             <img
-              src="images/logo/k1s_logo.png"
+              src="{% static 'images/logo/k1s_logo.png' %}"
               alt="logo"
               class="mobile-nav-logo"
             />
@@ -88,7 +89,7 @@
               <li class="nav-item-logo">
                 <a class="nav-link" href="{% url 'home:home' %}">
                   <img
-                    src="images/logo/k1s_logo.png"
+                    src="{% static 'images/logo/k1s_logo.png' %}"
                     alt="logo"
                     class="nav-logo"
                   />
@@ -175,7 +176,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -193,7 +194,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -211,7 +212,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -229,7 +230,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -247,7 +248,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -265,7 +266,7 @@
         <div class="col-md-4 col-sm-6">
           <a href="#" class="blog-post-link">
             <div class="bolg-post">
-              <img src="images/blog.png" alt="عکس" class="blog-image" />
+              <img src="{% static 'images/blog.png' %}" alt="عکس" class="blog-image" />
               <h2 class="bolg-title">موضوع</h2>
               <p class="blog-des">
                 بیایید اعتراف کنیم. همه ما حداقل یک بار با این تله‌ها در
@@ -288,7 +289,7 @@
           <div class="col-md-1 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/keyvansafe_logo.png"
+                src="{% static 'images/logo/keyvansafe_logo.png' %}"
                 alt="Small Logo 1"
                 class="small-logo"
               />
@@ -297,7 +298,7 @@
           <div class="col-md-1 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/bazgardoon_logo.png"
+                src="{% static 'images/logo/bazgardoon_logo.png' %}"
                 alt="Small Logo 2"
                 class="small-logo"
               />
@@ -338,7 +339,7 @@
           <div class="col-md-2 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/k1s_logo.png"
+                src="{% static 'images/logo/k1s_logo.png' %}"
                 alt="Big Logo"
                 class="big-logo"
               />

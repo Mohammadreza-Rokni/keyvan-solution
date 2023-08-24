@@ -1,6 +1,6 @@
 @font-face {
   font-family: "font1";
-  src: url(fonts/anjomanfont/Anjoman-Bold.ttf) format("truetype");
+  src: url(../fonts/anjomanfont/Anjoman-Bold.ttf) format("truetype");
 }
 
 .body {
@@ -75,21 +75,21 @@
 
 .background1 {
   padding: 10%;
-  background-image: url(images/backslider.png);
+  background-image: url(../images/backslider.png);
   background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
 .background2 {
   padding: 10%;
-  background-image: url(images/backslider.png);
+  background-image: url(../images/backslider.png);
   background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
 .background3 {
   padding: 10%;
-  background-image: url(images/backslider.png);
+  background-image: url(../images/backslider.png);
   background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;

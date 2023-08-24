@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
   <head>
@@ -12,8 +13,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
     <script
       src="https://code.jquery.com/jquery-2.2.0.min.js"
       type="text/javascript"
@@ -42,7 +43,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     /> -->
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
     <meta charset="UTF-8" />
     <meta
@@ -56,7 +57,7 @@
   <body class="body">
     <div class="loading-screen">
       <div class="loading-icon">
-        <img src="images/logo/k1s_logo.png" alt="Your Logo" class="logo" />
+        <img src="{% static 'images/logo/k1s_logo.png' %}" alt="Your Logo" class="logo" />
       </div>
     </div>
 
@@ -76,7 +77,7 @@
           </button>
           <a class="nav-link" href="{% url 'home:home' %}">
             <img
-              src="images/logo/k1s_logo.png"
+              src="{% static 'images/logo/k1s_logo.png' %}"
               alt="logo"
               class="mobile-nav-logo"
             />
@@ -89,7 +90,7 @@
               <li class="nav-item-logo">
                 <a class="nav-link" href="{% url 'home:home' %}">
                   <img
-                    src="images/logo/k1s_logo.png"
+                    src="{% static 'images/logo/k1s_logo.png' %}"
                     alt="logo"
                     class="nav-logo"
                   />
@@ -176,19 +177,19 @@
         </div>
         <div class="carousel-inner col-lg-12">
           <div class="carousel-item background1" data-bs-interval="10000">
-            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
           </div>
           <div class="carousel-item background2 active" data-bs-interval="2000">
-            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
           </div>
           <div class="carousel-item background3">
-            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
@@ -220,25 +221,25 @@
       <hr class="service-divider" />
       <div class="elements">
         <figure class="element1">
-          <img src="images/element1.png" alt="" />
+          <img src="{% static 'images/element1.png' %}" alt="" />
         </figure>
         <figure class="element2">
-          <img src="images/element2.png" alt="" />
+          <img src="{% static 'images/element2.png' %}" alt="" />
         </figure>
         <figure class="element3">
-          <img src="images/element3.png" alt="" />
+          <img src="{% static 'images/element3.png' %}" alt="" />
         </figure>
         <figure class="element4">
-          <img src="images/element4.png" alt="" />
+          <img src="{% static 'images/element4.png' %}" alt="" />
         </figure>
         <figure class="element5">
-          <img src="images/element5.png" alt="" />
+          <img src="{% static 'images/element5.png' %}" alt="" />
         </figure>
         <figure class="element6">
-          <img src="images/element6.png" alt="" />
+          <img src="{% static 'images/element6.png' %}" alt="" />
         </figure>
         <figure class="element7">
-          <img src="images/element7.png" alt="" />
+          <img src="{% static 'images/element7.png' %}" alt="" />
         </figure>
       </div>
     </div>
@@ -248,14 +249,14 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 col-6">
             <div class="box1">
-              <img src="images/helmet.png" alt="" />
+              <img src="{% static 'images/helmet.png' %}" alt="" />
               <h2>ایمنی</h2>
               <p>در سرتاسر KES، اولویت اصلی بهبود مستمر ایمنی است</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 col-6">
             <div class="box2">
-              <img src="images/shielf.png" alt="" />
+              <img src="{% static 'images/shielf.png' %}" alt="" />
               <h2>تیم ما</h2>
               <p>
                 بهره مندی از تیمی متعهد، متخصص و هماهنگ با خطوط مشی سازمان عامل
@@ -266,7 +267,7 @@
           </div>
           <div class="col-md-6 col-lg-3 col-6">
             <div class="box3">
-              <img src="images/leaf.png" alt="" />
+              <img src="{% static 'images/leaf.png' %}" alt="" />
               <h2>چشم انداز</h2>
               <p>
                 در نظر داریم تا سال 1403 شبکه خدمات EHSM خود را در سراسر ایران
@@ -277,7 +278,7 @@
           </div>
           <div class="col-md-6 col-lg-3 col-6">
             <div class="box4">
-              <img src="images/play.png" alt="" />
+              <img src="{% static 'images/play.png' %}" alt="" />
               <h2>خط مشی</h2>
               <p>
                 ماموریت ما حفاظت از محیط زیست است. ما محصولات و خدمات سبز را
@@ -294,13 +295,13 @@
       <h2>مشتریان ما</h2>
       <hr class="home-divider" />
       <section class="customer-logos slider">
-        <div class="slide"><img src="images/logo/logo1.png" /></div>
-        <div class="slide"><img src="images/logo/logo2.png" /></div>
-        <div class="slide"><img src="images/logo/logo3.png" /></div>
-        <div class="slide"><img src="images/logo/logo4.png" /></div>
-        <div class="slide"><img src="images/logo/logo5.png" /></div>
-        <div class="slide"><img src="images/logo/logo6.png" /></div>
-        <div class="slide"><img src="images/logo/logo6.png" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo1.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo2.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo3.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo4.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo5.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo6.png' %}" /></div>
+        <div class="slide"><img src="{% static 'images/logo/logo6.png' %}" /></div>
       </section>
     </div>
 
@@ -309,7 +310,7 @@
       <hr class="home-divider" />
       <section class="latest-events">
         <div class="square-box">
-          <img src="images/event.png" alt="Event 1" />
+          <img src="{% static 'images/event.png' %}" alt="Event 1" />
           <div class="detail-1">
             <h3>موضوع</h3>
             <p>
@@ -322,7 +323,7 @@
           </div>
         </div>
         <div class="square-box">
-          <img src="images/event.png" alt="Event 2" />
+          <img src="{% static 'images/event.png' %}" alt="Event 2" />
           <div class="detail-2">
             <h3>موضوع</h3>
             <p>
@@ -343,7 +344,7 @@
           <div class="col-md-2 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/k1s_logo.png"
+                src="{% static 'images/logo/k1s_logo.png' %}"
                 alt="Big Logo"
                 class="big-logo"
               />
@@ -384,7 +385,7 @@
           <div class="col-md-1 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/keyvansafe_logo.png"
+                src="{% static 'images/logo/keyvansafe_logo.png' %}"
                 alt="Small Logo 1"
                 class="small-logo"
               />
@@ -393,7 +394,7 @@
           <div class="col-md-1 col-6">
             <div class="footer-column">
               <img
-                src="images/logo/bazgardoon_logo.png"
+                src="{% static 'images/logo/bazgardoon_logo.png' %}"
                 alt="Small Logo 2"
                 class="small-logo"
               />
