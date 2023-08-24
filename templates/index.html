@@ -57,7 +57,11 @@
   <body class="body">
     <div class="loading-screen">
       <div class="loading-icon">
-        <img src="{% static 'images/logo/k1s_logo.png' %}" alt="Your Logo" class="logo" />
+        <img
+          src="{% static 'images/logo/k1s_logo.png' %}"
+          alt="Your Logo"
+          class="logo"
+        />
       </div>
     </div>
 
@@ -111,7 +115,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">مشتریان</a>
+                <a class="nav-link" href="{% url 'us:customers' %}">مشتریان</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="">راهکارهای ما</a>
@@ -123,14 +127,16 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="">ارتباط با ما</a>
+                <a class="nav-link" href="{% url 'us:contactus' %}"
+                  >ارتباط با ما</a
+                >
                 <ul class="dropdown-menu">
                   <li><a href="#">مورد 1</a></li>
                   <li><a href="#">مورد 2</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">درباره ما</a>
+                <a class="nav-link" href="{% url 'us:aboutus' %}">درباره ما</a>
               </li>
             </ul>
             <span class="nav-item">
@@ -177,19 +183,31 @@
         </div>
         <div class="carousel-inner col-lg-12">
           <div class="carousel-item background1" data-bs-interval="10000">
-            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
+            <img
+              src="{% static 'images/slider.png' %}"
+              class="d-block w-100"
+              alt=""
+            />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
           </div>
           <div class="carousel-item background2 active" data-bs-interval="2000">
-            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
+            <img
+              src="{% static 'images/slider.png' %}"
+              class="d-block w-100"
+              alt=""
+            />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
           </div>
           <div class="carousel-item background3">
-            <img src="{% static 'images/slider.png' %}" class="d-block w-100" alt="" />
+            <img
+              src="{% static 'images/slider.png' %}"
+              class="d-block w-100"
+              alt=""
+            />
             <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
@@ -295,13 +313,27 @@
       <h2>مشتریان ما</h2>
       <hr class="home-divider" />
       <section class="customer-logos slider">
-        <div class="slide"><img src="{% static 'images/logo/logo1.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo2.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo3.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo4.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo5.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo6.png' %}" /></div>
-        <div class="slide"><img src="{% static 'images/logo/logo6.png' %}" /></div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo1.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo2.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo3.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo4.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo5.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo6.png' %}" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/logo/logo6.png' %}" />
+        </div>
       </section>
     </div>
 
