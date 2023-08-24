@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView, ListView
-from .models import Customer, Contactus, Aboutus, Career, OTP
+from .models import Customer, Contactus, Aboutus, JobPos, OTP
 from .forms import JobSeekerForm, SupplierForm
 from random import randint
 import ghasedakpack
@@ -10,24 +10,25 @@ SMS = ghasedakpack.Ghasedak(
     "3f37ee30f4690b3334c5e3552b67615a4171d8a1f2ed7444efb87b628bd53e9b")
 
 
-class Career(DetailView):
-    template_name = 'index.html'
-    model = Career
+class JobposView(ListView):
+    template_name = 'jobposition.html'
+    model = JobPos
+    context_object_name = 'jobs'
 
-    def get(self, request):
-        form = SupplierForm()
-        return render(request, "html_page.html", {
-            "form": form
-        })
+    # def get(self, request):
+    #     form = SupplierForm()
+    #     return render(request, "html_page.html", {
+    #         "form": form
+    #     })
 
-    def post(self, request):
-        form = SupplierForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("html_page")
-        return render(request, "html_page.html", {
-            "form": form
-        })
+    # def post(self, request):
+    #     form = SupplierForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect("html_page")
+    #     return render(request, "html_page.html", {
+    #         "form": form
+    #     })
 
 
 class CustomersView(ListView):

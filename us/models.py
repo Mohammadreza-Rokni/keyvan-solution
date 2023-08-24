@@ -88,9 +88,8 @@ class Customer(models.Model):
         verbose_name_plural = "مشتریان"
 
 
-class Career(models.Model):
-    image = models.ImageField(verbose_name='عکس')
-    description = models.TextField(verbose_name='توضیحات')
+class JobPos(models.Model):
+    title = models.CharField(max_length=200, null=False, blank=False)
 
     class Meta:
         verbose_name = "فرصت شغلی"

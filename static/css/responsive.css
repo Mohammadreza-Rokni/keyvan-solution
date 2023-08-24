@@ -1,3 +1,22 @@
+@media (max-width: 768px) {
+  .solutions-container .title-box .title,
+  .without-job-container .title-box .title,
+  .job-container .title-box .title,
+  .titles .title-box .title {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .elements {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
 /* =============== home page =============== */
 
 /* responsive navbar */
@@ -14,6 +33,7 @@
 
   .nav-item {
     margin: 10px 0;
+    padding-top: 1rem;
   }
 
   .dropdown-menu {
@@ -56,41 +76,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .solutions-container .title-box .title,
-  .without-job-container .title-box .title,
-  .job-container .title-box .title,
-  .titles .title-box .title {
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .elements {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  /* responisve latest event */
-
-  .latest-events {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .square-box {
-    flex-direction: column-reverse;
-    width: 100%;
-    margin: 0 10px 20px 10px;
-  }
-
-  .square-box img {
-    width: 100%;
-  }
-}
+/* services responisve */
 
 @media (min-width: 786px) and (max-width: 1600px) {
   .elements {
@@ -149,6 +135,51 @@
   .box3 p,
   .box4 p {
     font-size: 0.8rem;
+  }
+}
+
+/* responisve latest event */
+
+@media (max-width: 991px) {
+  .latest-events {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square-box {
+    flex-direction: column-reverse;
+    width: auto;
+    margin: 0 10px 20px 10px;
+  }
+
+  .detail-1,
+  .detail-2 {
+    padding: 0;
+  }
+
+  .square-box img {
+    width: 100%;
+  }
+}
+
+/* responisve footer */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0;
+  }
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+  .footer-column h3,
+  .footer-column h4 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1rem;
+  }
+
+  .small-logo {
+    width: 30%;
   }
 }
 

@@ -13,8 +13,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'responsive.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}" />
     <script
       src="https://code.jquery.com/jquery-2.2.0.min.js"
       type="text/javascript"
@@ -43,7 +43,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     /> -->
-    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
     <meta charset="UTF-8" />
     <meta
@@ -164,29 +164,15 @@
 
     <div class="job-container">
       <div class="row">
+        {% for job in jobs %}
         <div class="col-lg-6">
           <div class="title-box">
-            <h2 class="title">موقعیت شغلی</h2>
+            <h2 class="title">{{ job.title }}</h2>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="title-box">
-            <h2 class="title">موقعیت شغلی</h2>
-          </div>
-        </div>
+        {% if forloop.counter|divisibleby:2 %}
       </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="title-box">
-            <h2 class="title">موقعیت شغلی</h2>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="title-box">
-            <h2 class="title">موقعیت شغلی</h2>
-          </div>
-        </div>
-      </div>
+      <div class="row">{% endif %} {% endfor %}</div>
     </div>
 
     <footer class="footer">
@@ -242,7 +228,7 @@
               <h4>Bazgardoon</h4>
             </div>
           </div>
-          <div class="col-md-2 col-6">
+          <div class="col-md-2 col-12">
             <div class="footer-column">
               <img
                 src="{% static 'images/logo/k1s_logo.png' %}"
