@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.text import slugify
 
 # Create your models here.
@@ -45,8 +46,9 @@ class Ourproducts(models.Model):
 class Article(models.Model):
     title = models.CharField(null=False, blank=False, max_length=100, verbose_name='عنوان')
     description = models.TextField(null=False, blank=False, verbose_name='توضیحات')
+    reference = models.TextField(default=False ,null=False, blank=False, verbose_name='منابع')
     image = models.ImageField(null=False, blank=False, verbose_name='عکس')
-    publish = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ انتشار')
+    publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ انتشار')
     update = models.DateTimeField(auto_now=True, verbose_name='تاریخ بروزسانی')
     slug = models.SlugField(blank=True, unique=True)
 
@@ -62,7 +64,7 @@ class Article(models.Model):
         verbose_name_plural = 'مقالات'
 
     def get_absolute_url(self):
-        return reverse('html_page', kwargs={'slug': self.slug})
+        return reverse('services:articles_detail', kwargs={'slug': self.slug})
 
     def __str__(self):
-        return f"{self.title} - {self.body[:30]}"
+        return f"{self.title} - {self.description[ :30]}"

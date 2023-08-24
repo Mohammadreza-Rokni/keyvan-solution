@@ -154,7 +154,7 @@
       <div class="blog-detail-container">
         <div class="row">
           <div class="col-lg-12">
-            <a href="#">
+            <a href="{% url 'services:article_list' %}">
               <img src="{% static 'images/back.png' %}" alt="عکس" />
             </a>
           </div>
@@ -166,7 +166,7 @@
           <div class="col-lg-1"></div>
           <div class="col-lg-10 upload-text">
             <div class="title-box">
-              <a class="back-text" href="#">
+              <a class="back-text" href="{% url 'services:article_list' %}">
                 <h2 class="title">بازگشت به صفحه بلاگ ها</h2>
               </a>
             </div>
@@ -179,7 +179,7 @@
     <div class="blog-detail-container">
       <div class="row">
         <div class="image col-lg-12">
-          <img src="{% static 'images/blog-detail.png' %}" alt="عکس" />
+          <img src="{{ article.image.url }}" alt="عکس" />
         </div>
       </div>
     </div>
@@ -188,22 +188,14 @@
       <div class="row align-items-start">
         <div class="right-side col-lg-12">
           <div class="title-box">
-            <h2 class="title">موضوع</h2>
+            <h2 class="title">{{ article.title }}</h2>
           </div>
 
           <hr class="blog-divider" />
 
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ article.description }}
             </p>
           </div>
         </div>
@@ -220,15 +212,7 @@
           <div class="row">
             <div class="text-box col-lg-5">
               <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-                جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در
-                زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و
-                دشواری موجود در
+                {{ article.reference }}
               </p>
             </div>
             <div class="col-lg-7"></div>
