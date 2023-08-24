@@ -487,7 +487,6 @@
 
 @media (max-width: 1000px) {
   .general-view {
-    flex-direction: column-reverse;
     margin: 1rem;
   }
 
@@ -497,6 +496,10 @@
 
   .general-view-title {
     text-align: center;
+  }
+
+  .general-view-logo {
+    width: 60%;
   }
 
   .second-aboutus {
