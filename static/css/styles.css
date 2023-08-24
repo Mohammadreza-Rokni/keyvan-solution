@@ -58,6 +58,13 @@
 
 .carousel {
   margin-top: 50px;
+  direction: ltr;
+}
+
+.carousel-indicators .button-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 55%;
 }
 
 .carousel-item .carousel-caption h5 {
@@ -69,24 +76,21 @@
 .background1 {
   padding: 10%;
   background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
+  background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
 .background2 {
   padding: 10%;
   background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
+  background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
 .background3 {
   padding: 10%;
   background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
+  background-size: 150%;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
 }
@@ -272,31 +276,6 @@
   font-size: 80px;
   /* font-weight: bold; */
   color: #ffffff;
-}
-
-.background1 {
-  padding: 10%;
-  background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
-  transition: all 0.3s ease;
-  background-repeat: no-repeat;
-}
-.background2 {
-  padding: 10%;
-  background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
-  transition: all 0.3s ease;
-  background-repeat: no-repeat;
-}
-.background3 {
-  padding: 10%;
-  background-image: url(images/backslider.png);
-  background-size: 2000px;
-  /* filter: blur(80); */
-  transition: all 0.3s ease;
-  background-repeat: no-repeat;
 }
 
 /* services */

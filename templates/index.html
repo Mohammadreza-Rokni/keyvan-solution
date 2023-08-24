@@ -1,828 +1,501 @@
-{% load static %}
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="fa-IR">
   <head>
-    <!-- Basic -->
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>KEYVANSOLUTION</title>
-
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
-
-    <!-- fonts style -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--owl slider stylesheet -->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/collection/components/icon/icon.min.css"
     />
 
-    <!-- font awesome style -->
-    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <script src="script.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <title>Keyvan Solution</title>
   </head>
 
-  <body>
-    <div class="hero_area">
-      <!-- header section strats -->
-      <header class="header_section">
-        <!-- <div class="header_top">
-        <div class="container-fluid header_top_container">
-          <div class="lang_box dropdown">
-            <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-              <img src="images/flag-uk.png" alt="flag" class=" " title="United Kingdom"> <i class="fa fa-angle-down " aria-hidden="true"></i>
-            </a>
-            <div class="dropdown-menu ">
-              <a href="#" class="dropdown-item">
-                <img src="images/flag-france.png" class="" alt="flag">
-              </a>
-            </div>
-            <span>
-              English
-            </span>
-          </div>
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 123455678990
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                Email : demo@gmail.com
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
-          </div>
-          <div class="social_box">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div> -->
-        <div class="header_bottom">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class=""> </span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav dir">
-                  
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home:home' %}"
-                      >صفحه اصلی <span class="sr-only">(current)</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="service.html">خدمات ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html"> راهکارهای ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html"> درباره ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="project.html">محصولات ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">مشتریان ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">ارتباط با ما</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html"> فرصت های شغلی</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">بلاگ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">لاگین</a>
-                  </li>
-                  <form class="form-inline" action="/search" method="get">
-                    <input
-                      class="form-control mr-sm-2 nav_search-box"
-                      type="text"
-                      placeholder="جستجو کنید ..."
-                      name="q"
-                      dir="rtl"
-                    >
-                    <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </form>
-                </ul>
-              </div>
-              <a class="navbar-brand" href="{% url 'home:home' %}">
-                <img src="{% static 'images/logo-removebg-preview.png' %}" alt="" />
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <!-- end header section -->
-      <!-- slider section -->
-      <section class="slider_section">
-        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 mx-auto">
-                    <div class="detail-box">
-                      <h1>تست</h1>
-                      <div class="btn-box">
-                        <a href="" class="btn1">ارتباط با ما</a>
-                        <a href="" class="btn2">درباره ما</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 mx-auto">
-                    <div class="detail-box">
-                      <h1>تست</h1>
-                      <div class="btn-box">
-                        <a href="" class="btn1">ارتباط با ما</a>
-                        <a href="" class="btn2">درباره ما</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 mx-auto">
-                    <div class="detail-box">
-                      <h1>تست</h1>
-                      <div class="btn-box">
-                        <a href="" class="btn1">ارتباط با ما</a>
-                        <a href="" class="btn2">درباره ما</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 mx-auto">
-                    <div class="detail-box">
-                      <h1>تست</h1>
-                      <div class="btn-box">
-                        <a href="" class="btn1">ارتباط با ما</a>
-                        <a href="" class="btn2">درباره ما</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 mx-auto">
-                    <div class="detail-box">
-                      <h1>تست</h1>
-                      <div class="btn-box">
-                        <a href="" class="btn1">ارتباط با ما</a>
-                        <a href="" class="btn2">درباره ما</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ol class="carousel-indicators">
-            <li
-              data-target="#customCarousel1"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#customCarousel1" data-slide-to="1"></li>
-            <li data-target="#customCarousel1" data-slide-to="2"></li>
-            <li data-target="#customCarousel1" data-slide-to="3"></li>
-            <li data-target="#customCarousel1" data-slide-to="4"></li>
-          </ol>
-        </div>
-      </section>
-      <!-- end slider section -->
+  <body class="body">
+    <div class="loading-screen">
+      <div class="loading-icon">
+        <img src="images/logo/k1s_logo.png" alt="Your Logo" class="logo" />
+      </div>
     </div>
 
-    <!-- about section -->
-
-    <!-- <section class="about_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="detail-box">
-              <div class="heading_container">
-                <h2>About Us</h2>
-              </div>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable. If you are going to use a passage of Lorem
-                Ipsum, you need to be sure there isn't anything embarrassing
-                hidden in the middle of text. All
-              </p>
-              <a href=""> Read More </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="img-box">
-              <img src="images/about-img.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- end about section -->
-
-    <!-- project section -->
-
-    <section class="project_section layout_padding">
-      <div class="container">
-        <div class="heading_container">
-          <h2>آخرین رویدادها</h2>
-        </div>
-        <div class="carousel-wrap">
-          <div class="owl-carousel project_carousel">
-            <div class="item painting">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/project1.jpg" alt="" />
-                  <a href="" class="pin_link">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                </div>
-              </div>
-            </div>
-            <div class="item reconstruction">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/project2.jpg" alt="" />
-                  <a href="" class="pin_link">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                </div>
-              </div>
-            </div>
-            <div class="item repair">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/project1.jpg" alt="" />
-                  <a href="" class="pin_link">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                </div>
-              </div>
-            </div>
-            <div class="item residential">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/ff3.jpeg" alt="" />
-                  <a href="" class="pin_link">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                </div>
-              </div>
-            </div>
-            <div class="item styling">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/ff2.jpeg" alt="" />
-                  <a href="" class="pin_link">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end project section -->
-
-    <!-- client section -->
-    <section class="client_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>مشتریان ما</h2>
-        </div>
-      </div>
-      <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="images/ff3.jpeg" alt="" />
-                    </div>
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>کیوان سیف</h5>
-                          <h6>مشتری</h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>این یک پیام تست است جهت نشان دادن نوشته است</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="images/ff1.jpeg" alt="" />
-                    </div>
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>کیوان سیف</h5>
-                          <h6>مشتری</h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>این یک پیام تست است جهت نشان دادن نوشته است</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="images/ff2.jpeg" alt="" />
-                    </div>
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>کیوان سیف</h5>
-                          <h6>مشتری</h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>این یک پیام تست است جهت نشان دادن نوشته است</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ol class="carousel-indicators">
-          <li
-            data-target="#customCarousel2"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#customCarousel2" data-slide-to="1"></li>
-          <li data-target="#customCarousel2" data-slide-to="2"></li>
-        </ol>
-      </div>
-    </section>
-    <!-- end client section -->
-    <!-- service section -->
-
-    <section class="service_section layout_padding">
-      <div class="service_container">
-        <div class="container">
-          <div class="heading_container">
-            <h2>خط مشی</h2>
-            <p>این یک پیام تست جهت نشان دادن متن است</p>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/s1.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                  <a href="">بیشتر بخوانید</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/s2.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                  <a href="">بیشتر بخوانید</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/s3.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                  <a href="">بیشتر بخوانید</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box">
-                <div class="img-box">
-                  <img src="images/s4.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h5>این یک پیام تست است</h5>
-                  <p>این یک پیام تست جهت نشان دادن متن است</p>
-                  <a href="">بیشتر بخوانید</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end service section -->
-
-    <!-- why us section -->
-
-    <section class="why_us_section layout_padding">
-      <div class="container">
-        <div class="heading_container">
-          <h2>چرا ما را انتخاب کنید؟</h2>
-        </div>
-        <div class="why_us_container">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/w1.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>این یک پیام تست است</h5>
-              <p>این یک پیام تست جهت نشان دادن متن است</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img-box">
-              <img src="images/w2.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>این یک پیام تست است</h5>
-              <p>این یک پیام تست جهت نشان دادن متن است</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img-box">
-              <img src="images/w3.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>این یک پیام تست است</h5>
-              <p>این یک پیام تست جهت نشان دادن متن است</p>
-            </div>
-          </div>
-        </div>
-        <div class="btn-box">
-          <a href=""> بیشتر بخوانید</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- end why us section -->
-
-    <!-- contact section -->
-    <!-- <section class="contact_section layout_padding-bottom">
-      <div class="container-fluid">
-        <div class="col-lg-4 col-md-5 offset-md-1">
-          <div class="heading_container">
-            <h2>Contact Us</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-5 offset-md-1">
-            <div class="form_container">
-              <form action="">
-                <div>
-                  <input type="text" placeholder="Your Name" />
-                </div>
-                <div>
-                  <input type="text" placeholder="Phone Number" />
-                </div>
-                <div>
-                  <input type="email" placeholder="Email" />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    class="message-box"
-                    placeholder="Message"
+    <header style="display: none">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="nav-link" href="{% url 'home:home' %}">
+            <img
+              src="images/logo/k1s_logo.png"
+              alt="logo"
+              class="mobile-nav-logo"
+            />
+          </a>
+          <div
+            class="nav-bar collapse navbar-collapse"
+            id="navbarTogglerDemo01"
+          >
+            <ul class="nav-ul">
+              <li class="nav-item-logo">
+                <a class="nav-link" href="{% url 'home:home' %}">
+                  <img
+                    src="images/logo/k1s_logo.png"
+                    alt="logo"
+                    class="nav-logo"
                   />
-                </div>
-                <div class="btn_box">
-                  <button>SEND</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-6 px-0">
-            <div class="map_container">
-              <div class="map">
-                <div id="googleMap"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- end contact section -->
-
-    <!-- info section -->
-    <section class="info_section">
-      <div
-        class="contact_info_container"
-        data-id="033d459"
-        data-element_type="container"
-        data-settings='{"background_background":"classic","content_width":"boxed"}'
-      >
-        <div class="footer_contact_info_inner">
-          <div
-            class="company_info_container"
-            data-id="7782f84"
-            data-element_type="container"
-            data-settings='{"content_width":"full"}'
-          >
-            <div
-              class="company_heading_widget"
-              data-id="bcd1273"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div class="company_heading_container">
-                <h4
-                  class="company_name elementor-heading-title elementor-size-medium"
-                >
-                  مپنا
-                </h4>
-              </div>
-            </div>
-            <div
-              class="company_description_widget"
-              data-id="bc9e867"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div class="company_description_container">
-                <p style="font-weight: 400">
-                  گروه مپنا مجموعه‌ای متشکل از نزدیک به 70 شرکت است که در صنایع
-                  نیروگاهی، نفت و گاز، حمل و نقل ریلی، آب، سلامت، برقی‌سازی و
-                  فناوری اطلاعات مشغول به فعالیت است.
-                </p>
-                <p style="font-weight: 400">
-                  دامنه فعالیت‌های گروه مپنا در این صنایع شامل توسعه و انتقال
-                  فناوری‌های روز جهان، طراحی و تولید تجهیزات کلیدی متکی به
-                  فناوری‌های پیشرفته، مدیریت و اجرای پروژه‌های بزرگ،
-                  سرمایه‌گذاری و نیز ارائه طیف وسیعی از خدمات مهندسی،
-                  بهره‌برداری، تعمیرات و بهینه‌سازی است که به مشتریان متعدد این
-                  گروه در بازارهای مختلف داخلی و بین‌المللی ارائه می‌شود.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="contact_info_container"
-            data-id="a45ad9e"
-            data-element_type="container"
-            data-settings='{"content_width":"full"}'
-          >
-            <div
-              class="contact_heading_widget"
-              data-id="2ca7772"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div class="contact_heading_container">
-                <h4
-                  class="contact_heading_title elementor-heading-title elementor-size-medium"
-                >
-                  تماس با مپنا
-                </h4>
-              </div>
-            </div>
-            <div
-              class="contact_details_widget elementor-icon-list--layout-traditional elementor-list-item-link-full_width"
-              data-id="881474f"
-              data-element_type="widget"
-              data-widget_type="icon-list.default"
-            >
-              <div class="contact_details_container">
-                <link
-                  rel="stylesheet"
-                  href="https://mapnagroup.com/ext/elementor/assets/css/widget-icon-list-rtl.min.css"
-                />
-                <ul class="contact_icon_list_items elementor-icon-list-items">
-                  <li class="contact_icon_list_item elementor-icon-list-item">
-                    <span
-                      class="contact_icon_list_icon elementor-icon-list-icon"
-                    >
-                      <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
-                    </span>
-                    <span
-                      class="contact_icon_list_text elementor-icon-list-text"
-                      >تهران، بلوارمیرداماد، نبش خیابان کجور، شماره 231</span
-                    >
-                  </li>
-                  <li class="contact_icon_list_item elementor-icon-list-item">
-                    <span
-                      class="contact_icon_list_icon elementor-icon-list-icon"
-                    >
-                      <i aria-hidden="true" class="fas fa-box"></i>
-                    </span>
-                    <span
-                      class="contact_icon_list_text elementor-icon-list-text"
-                      >کد پستی : 1918953651</span
-                    >
-                  </li>
-                  <li class="contact_icon_list_item elementor-icon-list-item">
-                    <span
-                      class="contact_icon_list_icon elementor-icon-list-icon"
-                    >
-                      <i aria-hidden="true" class="fas fa-box-open"></i>
-                    </span>
-                    <span
-                      class="contact_icon_list_text elementor-icon-list-text"
-                      >صندوق پستی : 19395/6448</span
-                    >
-                  </li>
-                  <li class="contact_icon_list_item elementor-icon-list-item">
-                    <a href="mailto:info@mapnagroup.com">
-                      <span
-                        class="contact_icon_list_icon elementor-icon-list-icon"
-                      >
-                        <i aria-hidden="true" class="fas fa-envelope"></i>
-                      </span>
-                      <span
-                        class="contact_icon_list_text elementor-icon-list-text"
-                        >info@mapnagroup.com</span
-                      >
-                    </a>
-                  </li>
-                  <li class="contact_icon_list_item elementor-icon-list-item">
-                    <span
-                      class="contact_icon_list_icon elementor-icon-list-icon"
-                    >
-                      <i aria-hidden="true" class="fas fa-phone"></i>
-                    </span>
-                    <span
-                      class="contact_icon_list_text elementor-icon-list-text"
-                      >تلفن</span
-                    >
-                  </li>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">محصولات</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
                 </ul>
-              </div>
+              </li>
+              <li class="nav-item nav-item dropdown">
+                <a class="nav-link" href="">خدمات</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">مشتریان</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="">راهکارهای ما</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">راهکارهای ایمنی</a></li>
+                  <li><a href="#">راهکارهای بهداشتی</a></li>
+                  <li><a href="#">راهکارهای محیط زیست</a></li>
+                  <li><a href="#">راهکارهای مدیریت</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="">ارتباط با ما</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">مورد 1</a></li>
+                  <li><a href="#">مورد 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">درباره ما</a>
+              </li>
+            </ul>
+            <span class="nav-item">
+              <form class="d-flex ml-auto" role="search">
+                <button type="submit" class="search-icon btn btn-link">
+                  <i class="fas fa-search"></i>
+                </button>
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="جست و جو کنید"
+                  aria-label="Search"
+                />
+              </form>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            class="button-circle"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            class="active button-circle"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            class="button-circle"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner col-lg-12">
+          <div class="carousel-item background1" data-bs-interval="10000">
+            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <div class="carousel-caption d-md-block">
+              <h5>بروز ترین تجهیزات ایمنی</h5>
             </div>
-            <div
-              class="contact_phone_numbers_widget"
-              data-id="622f164"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div class="contact_phone_numbers_container">
-                <p>
-                  ۲۳۱۵۱۰۰۱ – ۲۳۱۵۱۰۰۲ – ۹۸۲۱+<br />
-                  ۸۱۹۸۱۰۰۱ – ۸۱۹۸۱۰۰۲ – ۹۸۲۱+<br />
-                  ۲۴۷۱۱۰۰۱ – ۲۴۷۱۱۰۰۲ – ۹۸۲۱+
-                </p>
-              </div>
+          </div>
+          <div class="carousel-item background2 active" data-bs-interval="2000">
+            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <div class="carousel-caption d-md-block">
+              <h5>بروز ترین تجهیزات ایمنی</h5>
+            </div>
+          </div>
+          <div class="carousel-item background3">
+            <img src="images/slider.png" class="d-block w-100" alt="" />
+            <div class="carousel-caption d-md-block">
+              <h5>بروز ترین تجهیزات ایمنی</h5>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="services-container">
+      <h2>خدمات</h2>
+      <hr class="service-divider" />
+      <div class="elements">
+        <figure class="element1">
+          <img src="images/element1.png" alt="" />
+        </figure>
+        <figure class="element2">
+          <img src="images/element2.png" alt="" />
+        </figure>
+        <figure class="element3">
+          <img src="images/element3.png" alt="" />
+        </figure>
+        <figure class="element4">
+          <img src="images/element4.png" alt="" />
+        </figure>
+        <figure class="element5">
+          <img src="images/element5.png" alt="" />
+        </figure>
+        <figure class="element6">
+          <img src="images/element6.png" alt="" />
+        </figure>
+        <figure class="element7">
+          <img src="images/element7.png" alt="" />
+        </figure>
+      </div>
+    </div>
+
+    <div class="policy">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 col-6">
+            <div class="box1">
+              <img src="images/helmet.png" alt="" />
+              <h2>ایمنی</h2>
+              <p>در سرتاسر KES، اولویت اصلی بهبود مستمر ایمنی است</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-6">
+            <div class="box2">
+              <img src="images/shielf.png" alt="" />
+              <h2>تیم ما</h2>
+              <p>
+                بهره مندی از تیمی متعهد، متخصص و هماهنگ با خطوط مشی سازمان عامل
+                موفقیت کسب و کار است. تلاش ما برای حفظ و ایجاد محیط زیست پایدار
+                رسالت شرکت است.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-6">
+            <div class="box3">
+              <img src="images/leaf.png" alt="" />
+              <h2>چشم انداز</h2>
+              <p>
+                در نظر داریم تا سال 1403 شبکه خدمات EHSM خود را در سراسر ایران
+                گسترش دهیم و خدمات تخصصی خود را به 25% از صنایع و بنگاههای کسب و
+                کار سطح کشور عرضه نمائیم.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-6">
+            <div class="box4">
+              <img src="images/play.png" alt="" />
+              <h2>خط مشی</h2>
+              <p>
+                ماموریت ما حفاظت از محیط زیست است. ما محصولات و خدمات سبز را
+                تولید و ارائه می کنیم و همکاران و مشتریان خود را با این اصل همسو
+                می کنیم.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- end info_section -->
+    <div class="customer-container">
+      <h2>مشتریان ما</h2>
+      <hr class="home-divider" />
+      <section class="customer-logos slider">
+        <div class="slide"><img src="images/logo/logo1.png" /></div>
+        <div class="slide"><img src="images/logo/logo2.png" /></div>
+        <div class="slide"><img src="images/logo/logo3.png" /></div>
+        <div class="slide"><img src="images/logo/logo4.png" /></div>
+        <div class="slide"><img src="images/logo/logo5.png" /></div>
+        <div class="slide"><img src="images/logo/logo6.png" /></div>
+        <div class="slide"><img src="images/logo/logo6.png" /></div>
+      </section>
+    </div>
 
-    <!-- footer section -->
-    <footer class="footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By KEYVANSOLUTION
-          <br><a href="#">Develope By DAYANA</a>
-        </p>
+    <div class="event">
+      <h2>آخرین رویدادها</h2>
+      <hr class="home-divider" />
+      <section class="latest-events">
+        <div class="square-box">
+          <img src="images/event.png" alt="Event 1" />
+          <div class="detail-1">
+            <h3>موضوع</h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و
+            </p>
+            <a href="#" class="learn-more-button">...بیشتر</a>
+          </div>
+        </div>
+        <div class="square-box">
+          <img src="images/event.png" alt="Event 2" />
+          <div class="detail-2">
+            <h3>موضوع</h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و
+            </p>
+            <a href="#" class="learn-more-button">...بیشتر</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/k1s_logo.png"
+                alt="Big Logo"
+                class="big-logo"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>محصولات ما</h3>
+              <h4>Keyvansafe</h4>
+              <h4>Bazgardoon</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>راهکارهای ما</h3>
+              <h4>راهکارهای ایمنی</h4>
+              <h4>راهکارهای بهداشتی</h4>
+              <h4>راهکارهای محیط زیست</h4>
+              <h4>راهکارهای مدیریت</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>ارتباط با ما</h3>
+              <h4>اطلاعات تماس</h4>
+              <h4>همکاری با ما</h4>
+              <h4>موقعیت شغلی</h4>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="footer-column">
+              <h3>درباره ما</h3>
+              <h3>خدمات ما</h3>
+              <h3>مشتریان ما</h3>
+              <h3>بلاگ</h3>
+            </div>
+          </div>
+          <div class="col-md-1 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/keyvansafe_logo.png"
+                alt="Small Logo 1"
+                class="small-logo"
+              />
+            </div>
+          </div>
+          <div class="col-md-1 col-6">
+            <div class="footer-column">
+              <img
+                src="images/logo/bazgardoon_logo.png"
+                alt="Small Logo 2"
+                class="small-logo"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
-    <!-- footer section -->
 
-    <!-- jQery -->
-    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-    <!-- popper js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap js -->
-  <script src="{% static 'js/bootstrap.js' %}"></script>
-    <!-- owl slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!--  OwlCarousel 2 - Filter -->
-    <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
-    <!-- custom js -->
-    <script src="{% static 'js/custom.js' %}"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-    <!-- End Google Map -->
+    <!-- <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img
+            src="images/logo/keyvansafe_logo.png"
+            alt="Small Logo 1"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <img
+            src="images/logo/bazgardoon_logo.png"
+            alt="Small Logo 2"
+            class="small-logo"
+          />
+        </div>
+        <div class="footer-column">
+          <h3>درباره ما</h3>
+          <h3>خدمات ما</h3>
+          <h3>مشتریان ما</h3>
+          <h3>بلاگ</h3>
+        </div>
+        <div class="footer-column">
+          <h3>ارتباط با ما</h3>
+          <h4>اطلاعات تماس</h4>
+          <h4>همکاری با ما</h4>
+          <h4>موقعیت شغلی</h4>
+        </div>
+        <div class="footer-column">
+          <h3>راهکارهای ما</h3>
+          <h4>راهکارهای ایمنی</h4>
+          <h4>راهکارهای بهداشتی</h4>
+          <h4>راهکارهای محیط زیست</h4>
+          <h4>راهکارهای مدیریت</h4>
+        </div>
+        <div class="footer-column">
+          <h3>محصولات ما</h3>
+          <h4>Keyvansafe</h4>
+          <h4>Bazgardoon</h4>
+        </div>
+        <div class="footer-column">
+          <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- <footer class="site-footer">
+      <div class="small-logo-container">
+        <img src="images/logo/keyvansafe_logo.png" alt="Logo 1" class="logo" />
+        <img src="images/logo/bazgardoon_logo.png" alt="Logo 2" class="logo" />
+      </div>
+      <div class="footer-box">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <ul>
+              <h3>درباره ما</h3>
+              <h3>درباره ما</h3>
+              <h3>خدمات ما</h3>
+              <h3>مشتریان ما</h3>
+              <h3>بلاگ</h3>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul>
+              <h3>ارتباط با ما</h3>
+              <li>اطلاعات تماس</li>
+              <li>همکاری با ما</li>
+              <li>موقعیت شغلی</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul>
+              <h3>راهکارهای ما</h3>
+              <li>راهکارهای ایمنی</li>
+              <li>راهکاری های بهداشتی</li>
+              <li>راهکارهای محیط زیست</li>
+              <li>راهکارهای مدیریت</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul>
+              <h3>محصولات ما</h3>
+              <li>keyvanSafe</li>
+              <li>Bazgardoon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="big-logo-container">
+        <img src="images/logo/k1s_logo.png" alt="Big Logo" class="big-logo" />
+      </div>
+      
+    </footer> -->
+    <script></script>
   </body>
 </html>
