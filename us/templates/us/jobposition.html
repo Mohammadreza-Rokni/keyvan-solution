@@ -1,28 +1,27 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}موقعیت شغلی{% endblock %}
+{% extends 'base.html' %} {% load static %} {% block title %}موقعیت
+شغلی{%endblock %} {% block contant %}
 
-{% block contant %}
+<div class="titles">
+  <div class="col-12">
+    <div class="title-box">
+      <h2 class="title">موقعیت شغلی</h2>
+    </div>
+  </div>
+</div>
 
-    <div class="titles">
-      <div class="col-12">
+<div class="job-container">
+  <div class="row">
+    {% for job in jobs %}
+    <div class="col-lg-6">
+      <a href="{{ job.get_absolute_url }}">
         <div class="title-box">
-          <h2 class="title">موقعیت شغلی</h2>
+          <h2 class="title">{{ job.title }}</h2>
         </div>
-      </div>
+      </a>
     </div>
+    {% if forloop.counter|divisibleby:2 and not forloop.last %}
+  </div>
+  <div class="row">{% endif %} {% endfor %}</div>
+</div>
 
-    <div class="job-container">
-      <div class="row">
-        {% for job in jobs %}
-        <div class="col-lg-6">
-          <div class="title-box">
-            <h2 class="title">{{ job.title }}</h2>
-          </div>
-        </div>
-        {% if forloop.counter|divisibleby:2 %}
-      </div>
-      <div class="row">{% endif %} {% endfor %}</div>
-    </div>
-
-   {% endblock %}
+{% endblock %}

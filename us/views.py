@@ -13,6 +13,7 @@ SMS = ghasedakpack.Ghasedak(
 class JobposView(ListView):
     template_name = 'us/jobposition.html'
     model = JobPos
+    context_object_name = 'jobs'
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -20,6 +21,11 @@ class JobposView(ListView):
             # If no JobPos exists, render notjobpos.html
             self.template_name = 'us/notjobpos.html'
         return queryset
+
+
+class JobDeatailView(DetailView):
+    template_name = 'us/jobposdetail.html'
+    model = JobPos
 
     # def get(self, request):
     #     form = SupplierForm()
