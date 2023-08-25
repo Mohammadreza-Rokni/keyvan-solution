@@ -13,13 +13,9 @@
       <div class="row">
         <div class="col-md-12 text-right mt-4">
           <label class="mr-2" for="filterDropdown">فیلتر : </label>
-          <select
-            class="form-control d-inline-block w-auto"
-            id="filterDropdown"
-          >
-            <option value="all">همه</option>
-            <option value="category">جدید ترین</option>
-            <option value="date">قدیمی ترین</option>
+          <select class="form-control d-inline-block w-auto" id="filterDropdown" onchange="applyFilter(this.value)">
+            <option value="newest">جدید ترین</option>
+            <option value="oldest">قدیمی ترین</option>
           </select>
         </div>
       </div>
@@ -42,5 +38,7 @@
         {% endfor %}
       </div>
     </div>
+    
+   
 
   {% endblock %}

@@ -37,8 +37,33 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("header").style.display = "block"; // Show the navigation bar
   }, 2000); // Change the duration as needed
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const filterDropdown = document.getElementById("filterDropdown");
+  const currentSort = new URLSearchParams(window.location.search).get("sort");
 
+  if (currentSort) {
+    filterDropdown.value = currentSort; // انتخاب گزینه براساس پارامتر sort در URL
+  }
 
+  filterDropdown.addEventListener("change", function () {
+    applyFilter(this.value);
+  });
+});
+
+function applyFilter(filterValue) {
+  let url = window.location.href;
+  if (url.includes("?")) {
+    url = url.split("?")[0];
+  }
+
+  if (filterValue === "newest") {
+    window.location.href = `${url}?sort=newest`;
+  } else if (filterValue === "oldest") {
+    window.location.href = `${url}?sort=oldest`;
+  } else {
+    window.location.href = url;
+  }
+}
 // document.addEventListener("DOMContentLoaded", function () {
 //   const filterDropdown = document.getElementById("filterDropdown");
 //   const filterItems = document.querySelectorAll(".filter-item");

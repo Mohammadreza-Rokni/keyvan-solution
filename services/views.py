@@ -8,8 +8,18 @@ class ArticleListView(ListView):
     model = Article
     template_name = 'services/blog.html'
     context_object_name = "articles"
-    paginate_by = 6
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        sort = self.request.GET.get('sort')
+        if sort == 'newest':
+            queryset = queryset.order_by('-publish', '-update')
+        elif sort == 'oldest':
+            queryset = queryset.order_by('publish', 'update')
+
+        return queryset
+    
 
 class ArticleDetailView(DetailView):
     template_name = 'services/blog_detail.html'
