@@ -1,4 +1,8 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.text import slugify
+from unidecode import unidecode
+
 
 # Create your models here.
 
@@ -89,8 +93,25 @@ class Customer(models.Model):
 
 
 class JobPos(models.Model):
-    title = models.CharField(null=False, blank=False, max_length=100, verbose_name='عنوان')
+    title = models.CharField(null=False, blank=False,
+                             max_length=100, verbose_name='عنوان')
+    description = models.TextField(
+        null=True, blank=False, verbose_name='توضیحات')
+    description_requirements = models.TextField(
+        null=True, blank=True, verbose_name='نیازمندی ها')
+    description_advantages = models.TextField(
+        null=True, blank=True, verbose_name='مزایا')
+    slug = models.SlugField(blank=True, unique=True)
+
+    def save(
+            self, force_insert=False, force_update=False, using=None, update_fields=None
+    ):
+        self.slug = slugify(self.title, allow_unicode=True)
+        super(JobPos, self).save()
 
     class Meta:
         verbose_name = "فرصت شغلی"
         verbose_name_plural = "فرصت های شغلی"
+
+    def get_absolute_url(self):
+        return reverse('us:jobdetail', kwargs={'slug': self.slug})

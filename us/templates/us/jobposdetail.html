@@ -1,109 +1,75 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}   {% endblock %}
+{% extends 'base.html' %} {% load static %} {% load static %} {% load static %}
+{% block title %}{{ jobpos.title }}{% endblock %} {% block contant %}
 
-{% block contant %}
+<div class="jobpostitle">
+  <div class="col-12">
+    <div class="title-box">
+      <h2 class="title">{{ jobpos.title }}</h2>
+    </div>
+  </div>
+</div>
 
-
-    <div class="jobpostitle">
-      <div class="col-12">
-        <div class="title-box">
-          <h2 class="title">موقعیت شغلی</h2>
-        </div>
+<div class="job-detail-container">
+  <div class="row align-items-start">
+    <div class="right-side col-lg-12">
+      <div class="title-box">
+        <h2 class="title">توضیحات</h2>
+      </div>
+      <div class="text-box">
+        <p>{{ jobpos.description }}</p>
       </div>
     </div>
+  </div>
+</div>
+<hr class="divider" />
+<div class="job-detail-container">
+  <div class="row align-items-start">
+    <div class="right-side col-lg-12">
+      <div class="title-box">
+        <h2 class="title">نیازمندی ها</h2>
+      </div>
+      <div class="row">
+        <div class="text-box col-lg-5">
+          <p>{{ jobpos.description_requirements }}</p>
+        </div>
+        <div class="col-lg-7"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider" />
+<div class="job-detail-container">
+  <div class="row align-items-start">
+    <div class="right-side col-lg-12">
+      <div class="title-box">
+        <h2 class="title">مزایا</h2>
+      </div>
+      <div class="row">
+        <div class="text-box col-lg-5">
+          <p>{{ jobpos.description_advantages}}</p>
+        </div>
+        <div class="col-lg-7"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="job-detail-container">
-      <div class="row align-items-start">
-        <div class="right-side col-lg-12">
-          <div class="title-box">
-            <h2 class="title">توضیحات</h2>
-          </div>
-          <div class="text-box">
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
-            </p>
-          </div>
-        </div>
+<div class="job-upload-container">
+  <div class="row align-items-center upload-row">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-2 send-button">
+      <img src="{% static 'images/send.png' %}" alt="عکس" />
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-1 col-6 upload-button">
+      <img src="{% static 'images/upload.png' %}" alt="عکس" />
+    </div>
+    <div class="col-lg-2 col-6 upload-text">
+      <div class="title-box">
+        <h2 class="title">آپلود رزومه</h2>
       </div>
     </div>
-    <hr class="divider" />
-    <div class="job-detail-container">
-      <div class="row align-items-start">
-        <div class="right-side col-lg-12">
-          <div class="title-box">
-            <h2 class="title">نیازمندی ها</h2>
-          </div>
-          <div class="row">
-            <div class="text-box col-lg-5">
-              <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-                جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در
-                زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و
-                دشواری موجود در
-              </p>
-            </div>
-            <div class="col-lg-7"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr class="divider" />
-    <div class="job-detail-container">
-      <div class="row align-items-start">
-        <div class="right-side col-lg-12">
-          <div class="title-box">
-            <h2 class="title">مزایا</h2>
-          </div>
-          <div class="row">
-            <div class="text-box col-lg-5">
-              <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-                جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در
-                زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و
-                دشواری موجود در
-              </p>
-            </div>
-            <div class="col-lg-7"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 
-    <div class="job-upload-container">
-      <div class="row align-items-center upload-row">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-2 send-button">
-          <img src="{% static 'images/send.png' %}" alt="عکس" />
-        </div>
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 col-6 upload-button">
-          <img src="{% static 'images/upload.png' %}" alt="عکس" />
-        </div>
-        <div class="col-lg-2 col-6 upload-text">
-          <div class="title-box">
-            <h2 class="title">آپلود رزومه</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% endblock %}
+{% endblock %}
