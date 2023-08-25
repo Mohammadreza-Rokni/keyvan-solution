@@ -131,8 +131,8 @@
                   >ارتباط با ما</a
                 >
                 <ul class="dropdown-menu">
-                  <li><a href="#">مورد 1</a></li>
-                  <li><a href="#">مورد 2</a></li>
+                  <li><a href="#">درخواست همکاری</a></li>
+                  <li><a href="{% url 'us:jobpos' %}">موقعیت شعلی</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -351,7 +351,7 @@
               در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
               نیاز و
             </p>
-            <a href="#" class="learn-more-button">...بیشتر</a>
+            <a href="#" class="learn-more-button">بیشتر ...</a>
           </div>
         </div>
         <div class="square-box">
@@ -364,7 +364,7 @@
               در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
               نیاز و
             </p>
-            <a href="#" class="learn-more-button">...بیشتر</a>
+            <a href="#" class="learn-more-button">بیشتر ...</a>
           </div>
         </div>
       </section>
@@ -393,34 +393,93 @@
           </div>
           <div class="col-md-2 col-6">
             <div class="footer-column">
-              <h3>درباره ما</h3>
-              <h3>خدمات ما</h3>
-              <h3>مشتریان ما</h3>
-              <h3>بلاگ</h3>
+              <a class="footer-link" href="{% url 'us:aboutus' %}">
+                <h3>درباره ما</h3>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:ourservices_list' %}"
+              >
+                <h3>خدمات ما</h3>
+              </a>
+              <a class="footer-link" href="{% url 'us:customers' %}">
+                <h3>مشتریان ما</h3>
+              </a>
+              <a class="footer-link" href="{% url 'services:article_list' %}">
+                <h3>بلاگ</h3>
+              </a>
             </div>
           </div>
           <div class="col-md-2 col-6">
             <div class="footer-column">
-              <h3>ارتباط با ما</h3>
-              <h4>اطلاعات تماس</h4>
-              <h4>همکاری با ما</h4>
-              <h4>موقعیت شغلی</h4>
+              <a class="footer-link" href="{% url 'us:contactus' %}">
+                <h3>ارتباط با ما</h3>
+              </a>
+              <a class="footer-link" href="{% url 'us:contactus' %}">
+                <h4>اطلاعات تماس</h4>
+              </a>
+              <a class="footer-link" href="{% url 'us:contactus' %}">
+                <h4>همکاری با ما</h4>
+              </a>
+              <a class="footer-link" href="{% url 'us:jobpos' %}">
+                <h4>موقعیت شغلی</h4>
+              </a>
             </div>
           </div>
           <div class="col-md-2 col-6">
             <div class="footer-column">
-              <h3>راهکارهای ما</h3>
-              <h4>راهکارهای ایمنی</h4>
-              <h4>راهکارهای بهداشتی</h4>
-              <h4>راهکارهای محیط زیست</h4>
-              <h4>راهکارهای مدیریت</h4>
+              <a
+                class="footer-link"
+                href="{% url 'services:oursolutions_list' %}"
+              >
+                <h3>راهکارهای ما</h3>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:oursolutions_list' %}"
+              >
+                <h4>راهکارهای ایمنی</h4>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:oursolutions_list' %}"
+              >
+                <h4>راهکارهای بهداشتی</h4>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:oursolutions_list' %}"
+              >
+                <h4>راهکارهای محیط زیست</h4>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:oursolutions_list' %}"
+              >
+                <h4>راهکارهای مدیریت</h4>
+              </a>
             </div>
           </div>
           <div class="col-md-2 col-6">
             <div class="footer-column">
-              <h3>محصولات ما</h3>
-              <h4>Keyvansafe</h4>
-              <h4>Bazgardoon</h4>
+              <a
+                class="footer-link"
+                href="{% url 'services:ourproducts_list' %}"
+              >
+                <h3>محصولات ما</h3>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:ourproducts_list' %}"
+              >
+                <h4>Keyvansafe</h4>
+              </a>
+              <a
+                class="footer-link"
+                href="{% url 'services:ourproducts_list' %}"
+              >
+                <h4>Bazgardoon</h4>
+              </a>
             </div>
           </div>
           <div class="col-md-2 col-12">

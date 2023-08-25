@@ -163,6 +163,10 @@
   color: #ff8c00;
 }
 
+.dropdown-menu {
+  margin-top: 10px;
+}
+
 .dropdown-menu li {
   display: flex;
   background-color: #ffffff;
@@ -585,6 +589,18 @@ h2 {
 .big-logo {
   max-width: 100%;
   height: auto;
+}
+
+.footer-link {
+  color: #2b132b;
+  text-decoration: none;
+}
+
+.footer .footer-link:hover {
+  color: #ff8c00;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 /* =============== product page =============== */
