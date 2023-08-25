@@ -11,9 +11,15 @@ SMS = ghasedakpack.Ghasedak(
 
 
 class JobposView(ListView):
-    template_name = 'jobposition.html'
+    template_name = 'us/jobposition.html'
     model = JobPos
-    context_object_name = 'jobs'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if not queryset.exists():
+            # If no JobPos exists, render notjobpos.html
+            self.template_name = 'us/notjobpos.html'
+        return queryset
 
     # def get(self, request):
     #     form = SupplierForm()
@@ -32,13 +38,13 @@ class JobposView(ListView):
 
 
 class CustomersView(ListView):
-    template_name = 'customers.html'
+    template_name = 'us/customers.html'
     model = Customer
     context_object_name = 'customers'
 
 
 class ContactUsView(ListView):
-    template_name = 'contactus.html'
+    template_name = 'us/contactus.html'
     model = Contactus
 
     def post(self, request):
@@ -75,5 +81,5 @@ class ContactUsView(ListView):
 
 
 class AboutUsView(ListView):
-    template_name = 'aboutus.html'
+    template_name = 'us/aboutus.html'
     model = Aboutus

@@ -50,8 +50,8 @@
 
 /* =============== home page ============== */
 
+
 .carousel {
-  margin-top: 50px;
   direction: ltr;
 }
 
@@ -221,9 +221,7 @@
   display: none;
 }
 
-.carousel {
-  margin-top: 50px;
-}
+
 
 .carousel-item .carousel-caption h5 {
   margin-bottom: 350px;
@@ -1000,6 +998,7 @@ h2 {
 /* =============== solutions page =============== */
 
 .solutions-container {
+  margin-top: 20px;
   padding: 5%;
   padding-top: 40px;
   padding-bottom: 40px;

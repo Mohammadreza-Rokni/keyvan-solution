@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+  <head>
+    {% include 'includes/head_refrences.html' %}
+  </head>
+
+  <body class="body">
+    <div class="loading-screen">
+      <div class="loading-icon">
+        <img
+          src="{% static 'images/logo/k1s_logo.png' %}"
+          alt="Your Logo"
+          class="logo"
+        />
+      </div>
+    </div>
+    {% include 'includes/header.html' %}
+
+
+    {% block contant %}
+
+
+
+    {% endblock %}
+    
+    
+    {% include 'includes/footer.html' %}
+
+  </body>
+</html>

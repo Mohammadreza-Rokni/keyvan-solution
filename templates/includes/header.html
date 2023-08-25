@@ -1,0 +1,88 @@
+{% load static %}
+<header style="display: none">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="nav-link" href="{% url 'home:home' %}">
+          <img
+            src="{% static 'images/logo/k1s_logo.png' %}"
+            alt="logo"
+            class="mobile-nav-logo"
+          />
+        </a>
+        <div
+          class="nav-bar collapse navbar-collapse"
+          id="navbarTogglerDemo01"
+        >
+          <ul class="nav-ul">
+            <li class="nav-item-logo">
+              <a class="nav-link" href="{% url 'home:home' %}">
+                <img
+                  src="{% static 'images/logo/k1s_logo.png' %}"
+                  alt="logo"
+                  class="nav-logo"
+                />
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{% url 'services:ourproducts_list' %}">محصولات</a>
+            </li>
+            <li class="nav-item nav-item dropdown">
+              <a class="nav-link" href="{% url 'services:ourservices_list' %}">خدمات</a>
+              <!-- <ul class="dropdown-menu">
+                <li><a href="#">مورد 1</a></li>
+                <li><a href="#">مورد 2</a></li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'us:customers' %}">مشتریان</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{% url 'services:oursolutions_list' %}">راهکارهای ما</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:oursolutions_list' %}#rahkar-imeni">راهکارهای ایمنی</a></li>
+                <li><a href="{% url 'services:oursolutions_list' %}#rahkar-behdashti">راهکارهای بهداشتی</a></li>
+                <li><a href="{% url 'services:oursolutions_list' %}#rahkar-mohiti">راهکارهای محیط زیست</a></li>
+                <li><a href="{% url 'services:oursolutions_list' %}#rahkar-modiriati">راهکارهای مدیریت</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{% url 'us:contactus' %}"
+                >ارتباط با ما</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#">درخواست همکاری</a></li>
+                <li><a href="{% url 'us:jobpos' %}">موقعیت شعلی</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'us:aboutus' %}">درباره ما</a>
+            </li>
+          </ul>
+          <span class="nav-item">
+            <form class="d-flex ml-auto" role="search">
+              <button type="submit" class="search-icon btn btn-link">
+                <i class="fas fa-search"></i>
+              </button>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="جست و جو کنید"
+                aria-label="Search"
+              />
+            </form>
+          </span>
+        </div>
+      </div>
+    </nav>
+</header>

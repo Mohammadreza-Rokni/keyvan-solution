@@ -6,20 +6,20 @@ from .models import Oursolutions, Ourservices, Ourproducts, Article
 
 class ArticleListView(ListView):
     model = Article
-    template_name = 'blog.html'
+    template_name = 'services/blog.html'
     context_object_name = "articles"
     paginate_by = 6
 
 
 class ArticleDetailView(DetailView):
-    template_name = 'blog_detail.html'
+    template_name = 'services/blog_detail.html'
     model = Article
 
 
 
 class OurSolutionsListView(ListView):
     model = Oursolutions
-    template_name = 'solutions.html'
+    template_name = 'services/solutions.html'
     context_object_name = "oursolutions"
 
 
@@ -31,7 +31,7 @@ class OurSolutionsListView(ListView):
 
 class OurServicesListView(ListView):
     model = Ourservices
-    template_name = 'services.html'
+    template_name = 'services/services.html'
     context_object_name = "ourservices"
 
 
@@ -42,7 +42,7 @@ class OurServicesListView(ListView):
 
 class OurProductsListView(ListView):
     model = Ourproducts
-    template_name = 'product.html'
+    template_name = 'services/product.html'
     context_object_name = "ourproducts"
 
 

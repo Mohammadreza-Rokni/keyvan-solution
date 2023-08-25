@@ -89,7 +89,7 @@ class Customer(models.Model):
 
 
 class JobPos(models.Model):
-    title = models.CharField(max_length=200, null=False, blank=False)
+    title = models.CharField(null=False, blank=False, max_length=100, verbose_name='عنوان')
 
     class Meta:
         verbose_name = "فرصت شغلی"
