@@ -103,9 +103,9 @@ class ContactUsView(ListView):
                 phone=supplier_cd["phone_number"], code=supplier_random_code)
             supplier_form.save()
 
-            return redirect("html_page")
+            return redirect("home:home")
 
-        return render(request, "html_page.html", {
+        return render(request, "us/workus.html", {
             "jobseeker_form": jobseeker_form,
             "supplier_form": supplier_form
         })
