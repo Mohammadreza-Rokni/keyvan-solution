@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from django.views.generic import DetailView, ListView
-from .models import Customer, Contactus, Aboutus, JobPos, OTP
-from .forms import JobSeekerForm, SupplierForm
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView, FormView, UpdateView
+from .models import Customer, Contactus, Aboutus, JobPos, OTP, Resume
+from .forms import JobSeekerForm, SupplierForm, ResumeForm
 from random import randint
 import ghasedakpack
 
@@ -23,9 +24,33 @@ class JobposView(ListView):
         return queryset
 
 
-class JobDeatailView(DetailView):
+class JobDeatailView(UpdateView):
     template_name = 'us/jobposdetail.html'
     model = JobPos
+    form_class = ResumeForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = ResumeForm()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = ResumeForm(request.POST, request.FILES)
+        if form.is_valid():
+            resume_file = form.cleaned_data['resume']
+
+            Resume.objects.create(
+                job_position=self.object,
+                title=form.cleaned_data['title'],
+                resume=resume_file
+            )
+
+            return redirect('us:jobdetail', slug=self.object.slug)
+        else:
+            print(form.errors)
+            context = self.get_context_data(object=self.object, form=form)
+            return self.render_to_response(context)
 
     # def get(self, request):
     #     form = SupplierForm()

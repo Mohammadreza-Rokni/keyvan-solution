@@ -114,3 +114,14 @@ class JobPos(models.Model):
 
     def get_absolute_url(self):
         return reverse('us:jobdetail', kwargs={'slug': self.slug})
+
+
+class Resume(models.Model):
+    job_position = models.ForeignKey(JobPos, on_delete=models.CASCADE)
+    title = models.CharField(null=True, blank=False,
+                             max_length=200, verbose_name='عنوان')
+    resume = models.FileField(upload_to='resumes/', null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.title

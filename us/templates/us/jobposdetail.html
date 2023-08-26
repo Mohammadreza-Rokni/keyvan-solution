@@ -54,22 +54,41 @@
   </div>
 </div>
 
+{% comment %}
 <div class="job-upload-container">
-  <div class="row align-items-center upload-row">
-    <div class="col-lg-6"></div>
-    <div class="col-lg-2 send-button">
-      <img src="{% static 'images/send.png' %}" alt="عکس" />
-    </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-1 col-6 upload-button">
-      <img src="{% static 'images/upload.png' %}" alt="عکس" />
-    </div>
-    <div class="col-lg-2 col-6 upload-text">
-      <div class="title-box">
-        <h2 class="title">آپلود رزومه</h2>
+  <form
+    method="post"
+    enctype="multipart/form-data"
+    action="{% url 'us:jobdetail' %}"
+  >
+    {% csrf_token %}
+    <div class="row align-items-center upload-row">
+      {{ form }}
+      <div class="col-lg-6"></div>
+      <button type="submit" id="form-submit" class="col-lg-2 send-button">
+        <img src="{% static 'images/send.png' %}" alt="عکس" />
+      </button>
+      <div class="col-lg-1"></div>
+      <button
+        type="submit"
+        id="form-input"
+        class="col-lg-1 col-6 upload-button"
+      >
+        <img src="{% static 'images/upload.png' %}" alt="عکس" />
+      </button>
+      <div class="col-lg-2 col-6 upload-text">
+        <div class="title-box">
+          <h2 class="title">آپلود رزومه</h2>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
+{% endcomment %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Upload</button>
+</form>
 
 {% endblock %}
