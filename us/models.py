@@ -26,6 +26,7 @@ TYPE_OF_COOPERATION_CHOICES = [
 
 
 class OTP(models.Model):
+    token = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=11)
     code = models.SmallIntegerField()
     expration_code = models.DateTimeField(auto_now_add=True)

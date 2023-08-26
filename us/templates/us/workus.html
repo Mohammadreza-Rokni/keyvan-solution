@@ -1,9 +1,22 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}همکاری با ما{% endblock %}
+{% extends 'base.html' %} {% load static %} {% load static %} {% load static %}
+{% block title %}همکاری با ما{% endblock %} {% block contant %}
 
-{% block contant %}
+<body>
+  <h2>Enter OTP</h2>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
 
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
 
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+</body>
 
-  {% endblock %}
+{% endblock %}
