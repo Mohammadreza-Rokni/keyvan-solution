@@ -148,17 +148,24 @@
 
   .square-box {
     flex-direction: column-reverse;
-    width: auto;
-    margin: 0 10px 20px 10px;
+    min-width: 290px;
+    /* width: auto; */
+    margin: auto;
   }
 
   .detail-1,
   .detail-2 {
     padding: 0;
+    text-align: center;
   }
-
+  .detail-1 p,
+  .detail-2 p {
+    padding: 0;
+    text-align: center;
+    font-size: 13.5px;
+  }
   .square-box img {
-    width: 100%;
+    padding: 30px;
   }
 }
 
@@ -489,10 +496,28 @@
   }
 
   .contacts-item {
-    padding: 1rem;
-    font-size: 12px;
+    padding-right: 20px; /* Reduce padding for mobile */
+    margin-bottom: 5px; /* Adjust margin for mobile */
+    font-size: 18px;
+  }
+
+  .contacts-item::before {
+    width: 19px; /* Adjust icon size for mobile */
+    height: 19px; /* Adjust icon size for mobile */
   }
 }
+/* @media (max-width: 768px) {
+  .contacts-item {
+    padding-right: 10px; 
+    margin-bottom: 5px;
+  }
+
+  .contacts-item::before {
+    width: 12px; 
+    height: 12px; 
+  }
+} */
+
 
 /* question box responsive */
 

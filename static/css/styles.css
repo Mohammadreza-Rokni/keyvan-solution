@@ -510,8 +510,9 @@ h2 {
 }
 
 .square-box img {
-  width: 50%;
-  max-width: 297px;
+  width: 297px;
+  height: 297px;
+  /* max-width: 297px; */
   border-radius: 15px;
   margin: 10px auto;
 }
@@ -1082,7 +1083,7 @@ h2 {
   padding: 1rem;
   font-size: 28px;
   color: #2b132b;
-  padding-right: 40px; /* Add padding to make space for the icon on the right */
+  padding-right: 50px; /* Add padding to make space for the icon on the right */
   margin-bottom: 10px;
   text-align: right; /* Align the text to the right */
 }
@@ -1092,8 +1093,8 @@ h2 {
   /* top: 0; */
   
   right: 0;
-  width: 25px; /* Set the width of your icons */
-  height: 25px; /* Set the height of your icons */
+  width: 6%; /* Set the width of your icons */
+  height: 50%; /* Set the height of your icons */
   background-size: cover;
 }
 
@@ -1111,6 +1112,8 @@ h2 {
 
 .contacts-item.address::before {
   background-image: url('../images/logo/location-icon.png'); /* Replace 'path-to-efef.png' with the actual path to your icon */
+  /* width:5%;
+  height: auto; */
 }
 
 .contacts-item.postalcode::before {
