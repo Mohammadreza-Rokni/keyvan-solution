@@ -30,9 +30,9 @@ function changeSlide() {
 }
 setInterval(changeSlide, 3000);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Simulate the delay in loading your content (remove this in production)
-  setTimeout(function() {
+  setTimeout(function () {
     document.querySelector(".loading-screen").style.display = "none"; // Hide loading screen
     document.querySelector("header").style.display = "block"; // Show the navigation bar
   }, 2000); // Change the duration as needed
@@ -64,6 +64,10 @@ function applyFilter(filterValue) {
     window.location.href = url;
   }
 }
+
+$(".message a").click(function () {
+  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
 // document.addEventListener("DOMContentLoaded", function () {
 //   const filterDropdown = document.getElementById("filterDropdown");
 //   const filterItems = document.querySelectorAll(".filter-item");

@@ -157,7 +157,7 @@ class CheckOTPView(View):
                 return redirect('home:home')
 
         else:
-            form.add_error("phone", "invalid data")
+            form.add_error("code", "invalid data")
 
         return render(request, 'us/checkotp.html', {'form': form})
 
