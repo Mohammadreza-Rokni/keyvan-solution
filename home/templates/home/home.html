@@ -339,7 +339,7 @@
       <section class="latest-events">
         {% for article in articles|slice:":1" %} 
         <div class="square-box">
-        <a href="{{ article.get_absolute_url }}"><img src="{{ article.image.url }}" alt="Event 1" /></a>
+        <a href="{{ article.get_absolute_url }}"><img class="first-item" src="{{ article.image.url }}" alt="Event 1" /></a>
           <div class="detail-1">
             <h3>{{ article.title }}</h3>
             <p>
@@ -352,7 +352,7 @@
         {% endfor %}
         {% for article in articles|slice:"1:2" %} 
         <div class="square-box">
-          <a href="{{ article.get_absolute_url }}"><img src="{{ article.image.url }}" alt="Event 1" /></a>
+          <a href="{{ article.get_absolute_url }}"><img class="first-item" src="{{ article.image.url }}" alt="Event 1" /></a>
           <div class="detail-1">
             <h3>{{ article.title }}</h3>
             <p>
