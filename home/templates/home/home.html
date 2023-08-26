@@ -180,33 +180,33 @@
         <div class="carousel-inner col-lg-12">
           <div class="carousel-item background1" data-bs-interval="10000">
             <img
-              src="{% static 'images/slider.png' %}"
+              src="{% static 'images/sliderr.png' %}"
               class="d-block w-100"
               alt=""
             />
-            <div class="carousel-caption d-md-block">
+            <!-- <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
-            </div>
+            </div> -->
           </div>
           <div class="carousel-item background2 active" data-bs-interval="2000">
             <img
-              src="{% static 'images/slider.png' %}"
+              src="{% static 'images/sliderr.png' %}"
               class="d-block w-100"
               alt=""
             />
-            <div class="carousel-caption d-md-block">
+            <!-- <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
-            </div>
+            </div> -->
           </div>
           <div class="carousel-item background3">
             <img
-              src="{% static 'images/slider.png' %}"
+              src="{% static 'images/sliderr.png' %}"
               class="d-block w-100"
               alt=""
             />
-            <div class="carousel-caption d-md-block">
+            <!-- <div class="carousel-caption d-md-block">
               <h5>بروز ترین تجهیزات ایمنی</h5>
-            </div>
+            </div> -->
           </div>
         </div>
         <button
@@ -337,13 +337,27 @@
       <h2>آخرین رویدادها</h2>
       <hr class="home-divider" />
       <section class="latest-events">
-        {% for article in articles|slice:":2" %} 
+        {% for article in articles|slice:":1" %} 
+        <div class="square-box">
+        <a href="{{ article.get_absolute_url }}"><img src="{{ article.image.url }}" alt="Event 1" /></a>
+          <div class="detail-1">
+            <h3>{{ article.title }}</h3>
+            <p>
+              {{ article.description|slice:":40" }}{# This line limits the text to 50 characters #}
+              {% if article.description|length > 40 %}...{% endif %}{# Add ellipsis if text is longer than 50 characters #}
+            </p>
+            <a href="{{ article.get_absolute_url }}" class="learn-more-button">بیشتر ...</a>
+          </div>
+        </div>
+        {% endfor %}
+        {% for article in articles|slice:"1:2" %} 
         <div class="square-box">
           <a href="{{ article.get_absolute_url }}"><img src="{{ article.image.url }}" alt="Event 1" /></a>
           <div class="detail-1">
             <h3>{{ article.title }}</h3>
             <p>
-              {{ article.description }}
+              {{ article.description|slice:":40" }}{# This line limits the text to 50 characters #}
+              {% if article.description|length > 40 %}...{% endif %}{# Add ellipsis if text is longer than 50 characters #}
             </p>
             <a href="{{ article.get_absolute_url }}" class="learn-more-button">بیشتر ...</a>
           </div>

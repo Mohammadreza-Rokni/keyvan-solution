@@ -66,19 +66,21 @@
       {{ form }}
       <div class="col-lg-6"></div>
       <button type="submit" id="form-submit" class="col-lg-2 send-button">
-        <img src="{% static 'images/send.png' %}" alt="عکس" />
+        <p>
+          <label for="id_resume">آپلود رزومه:<img style="background-color: rgba(147, 75, 148, 1); border-radius: 15px;" src="{% static 'images/upload.png' %}" alt="عکس" /></label>
+          <input style="display: none;" type="file" name="resume" required="" id="id_resume">
+        </p>
       </button>
       <div class="col-lg-1"></div>
-      <button
-        type="submit"
-        id="form-input"
-        class="col-lg-1 col-6 upload-button"
-      >
-        <img src="{% static 'images/upload.png' %}" alt="عکس" />
+      <button style="background-color: rgba(147, 75, 148, 1);" type="submit" id="form-submit" class="col-lg-2 send-button">
+        <img src="{% static 'images/send.png' %}" alt="عکس" />
       </button>
       <div class="col-lg-2 col-6 upload-text">
         <div class="title-box">
-          <h2 class="title">آپلود رزومه</h2>
+          <p class="title">
+            <label for="id_title">نام:</label>
+            <input type="text" name="title" maxlength="200" required="" id="id_title">
+          </p>
         </div>
       </div>
     </div>
@@ -87,8 +89,54 @@
 {% endcomment %}
 
 <form method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Upload</button>
+  {% csrf_token %}
+  <div class="form-container">
+    <div class="input-container col-6">
+      <p class="title">
+        <label for="id_title">نام:</label>
+          <input style="border-radius: 5px;  background-color: #f0f0f0;" class="title-input" type="text" name="title" maxlength="200" required="" id="id_title">
+      </p>
+    </div>
+  </div>
+    <button type="submit" id="form-submit" class="col-lg-2 send-button">
+      <label style="color: #fff; font-size: 20px;" for="id_resume">آپلود رزومه<img style="background-color: rgba(147, 75, 148, 1); border-radius: 15px;" src="{% static 'images/upload.png' %}" alt="عکس" /></label>
+      <input style="display: none;" type="file" name="resume" required="" id="id_resume">
+  </button>
+  <button style="background-color: rgba(147, 75, 148, 1);" type="submit" id="form-submit" class="col-lg-2 send-button">
+    <img src="{% static 'images/send.png' %}" alt="عکس" />
+  </button>
 </form>
 
+
+  <!-- <p>
+    <label for="id_resume">آپلود رزومه:<img style="background-color: rgba(147, 75, 148, 1); border-radius: 15px;" src="{% static 'images/upload.png' %}" alt="عکس" /></label>
+    <input style="display: none;" type="file" name="resume" required="" id="id_resume">
+  </p>
+  <button style="background-color: rgba(147, 75, 148, 1);" type="submit" id="form-submit" class="col-lg-2 send-button">
+    <img src="{% static 'images/send.png' %}" alt="عکس" />
+  </button>
+</form> -->
+
+
+<!-- <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="col-lg-2 col-6 upload-text">
+    <div class="title-box">
+      <p class="title">
+        <label for="id_title">نام:</label>
+        <div class="input-center"> {# Create a container to center-align the input field #}
+          <input class="title-input" type="text" name="title" maxlength="200" required="" id="id_title">
+        </div>
+      </p>
+    </div>
+  </div>
+  <button type="submit" id="form-submit" class="col-lg-2 send-button">
+      <label style="color: #fff; font-size: 20px;" for="id_resume">آپلود رزومه<img style="background-color: rgba(147, 75, 148, 1); border-radius: 15px;" src="{% static 'images/upload.png' %}" alt="عکس" /></label>
+      <input style="display: none;" type="file" name="resume" required="" id="id_resume">
+  </button>
+  
+  <button style="background-color: rgba(147, 75, 148, 1);" type="submit" id="form-submit" class="col-lg-2 send-button">
+    <img src="{% static 'images/send.png' %}" alt="عکس" />
+  </button>
+</form> -->
 {% endblock %}
