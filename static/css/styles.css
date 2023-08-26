@@ -1071,13 +1071,51 @@ h2 {
   font-size: 38px;
   color: rgba(106, 105, 171, 1);
 }
+.contacts {
+ 
+  list-style: none;
+  padding-left: 0;
+}
 
 .contacts-item {
+  position: relative;
   padding: 1rem;
   font-size: 28px;
   color: #2b132b;
+  padding-right: 40px; /* Add padding to make space for the icon on the right */
+  margin-bottom: 10px;
+  text-align: right; /* Align the text to the right */
+}
+.contacts-item::before {
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  
+  right: 0;
+  width: 25px; /* Set the width of your icons */
+  height: 25px; /* Set the height of your icons */
+  background-size: cover;
 }
 
+.contacts-item.tel::before {
+  background-image: url('../images/logo/phone-icon.png'); /* Replace 'path-to-email-icon.png' with the actual path to your icon */
+}
+
+.contacts-item.whatsapp::before {
+  background-image: url('../images/logo/whatsapp-icon.png'); /* Replace 'path-to-messi.png' with the actual path to your icon */
+}
+
+.contacts-item.email::before {
+  background-image: url('../images/logo/email-icon.png'); /* Replace 'path-to-sec.png' with the actual path to your icon */
+}
+
+.contacts-item.address::before {
+  background-image: url('../images/logo/location-icon.png'); /* Replace 'path-to-efef.png' with the actual path to your icon */
+}
+
+.contacts-item.postalcode::before {
+  background-image: url('../images/logo/postalcode-icon.png'); /* Replace 'path-to-edece.png' with the actual path to your icon */
+}
 /* question boxes */
 
 .question-box {
