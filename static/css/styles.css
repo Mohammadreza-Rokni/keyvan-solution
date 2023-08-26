@@ -1083,7 +1083,7 @@ h2 {
   padding: 1rem;
   font-size: 28px;
   color: #2b132b;
-  padding-right: 50px; /* Add padding to make space for the icon on the right */
+  padding-right: 70px; /* Add padding to make space for the icon on the right */
   margin-bottom: 10px;
   text-align: right; /* Align the text to the right */
 }
@@ -1093,31 +1093,46 @@ h2 {
   /* top: 0; */
   
   right: 0;
-  width: 6%; /* Set the width of your icons */
-  height: 50%; /* Set the height of your icons */
+  /* width: 6%;
+  height: 50%; */
   background-size: cover;
 }
 
 .contacts-item.tel::before {
   background-image: url('../images/logo/phone-icon.png'); /* Replace 'path-to-email-icon.png' with the actual path to your icon */
+  width: 46px;
+  height: 52px;
 }
 
 .contacts-item.whatsapp::before {
   background-image: url('../images/logo/whatsapp-icon.png'); /* Replace 'path-to-messi.png' with the actual path to your icon */
+  width: 46px;
+  height: 46px;
 }
 
 .contacts-item.email::before {
   background-image: url('../images/logo/email-icon.png'); /* Replace 'path-to-sec.png' with the actual path to your icon */
+  width: 50px;
+  height: 36px;
 }
 
 .contacts-item.address::before {
   background-image: url('../images/logo/location-icon.png'); /* Replace 'path-to-efef.png' with the actual path to your icon */
   /* width:5%;
   height: auto; */
+  width: 46px;
+  height: 70px;
 }
 
 .contacts-item.postalcode::before {
   background-image: url('../images/logo/postalcode-icon.png'); /* Replace 'path-to-edece.png' with the actual path to your icon */
+  width: 46px;
+  height: 30px;
+}
+.contacts-item a{
+  text-decoration: none;
+  /* transition: #2B132B; */
+  color: #2b132b;
 }
 /* question boxes */
 

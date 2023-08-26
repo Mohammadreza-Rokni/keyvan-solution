@@ -168,6 +168,12 @@
     padding: 30px;
   }
 }
+@media (max-width: 1100px) {
+  .square-box img {
+    width: 220px;
+    height: 220px;
+  }
+}
 
 /* responisve footer */
 
@@ -496,14 +502,41 @@
   }
 
   .contacts-item {
-    padding-right: 20px; /* Reduce padding for mobile */
+    padding-right: 40px; /* Reduce padding for mobile */
     margin-bottom: 5px; /* Adjust margin for mobile */
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .contacts{
+    padding-right: 10px;
   }
 
   .contacts-item::before {
     width: 19px; /* Adjust icon size for mobile */
     height: 19px; /* Adjust icon size for mobile */
+  }
+  .contacts-item.tel::before {
+    width: 23px;
+    height: 26px;
+  }
+  
+  .contacts-item.whatsapp::before {
+    width: 23px;
+    height: 23px;
+  }
+  
+  .contacts-item.email::before {
+    width: 25px;
+    height: 18px;
+  }
+  
+  .contacts-item.address::before {
+    width: 23px;
+    height: 35px;
+  }
+  
+  .contacts-item.postalcode::before {
+    width: 27px;
+    height: 18px;
   }
 }
 /* @media (max-width: 768px) {
