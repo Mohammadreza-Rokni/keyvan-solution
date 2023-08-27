@@ -23,184 +23,222 @@
         </p>
       </div>
     </div>
-
+    {% for service in services|slice:":1"  %}
     <div class="service-container">
       <div class="row align-items-start">
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">مدیریت پسماند</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-1.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
+        
       </div>
     </div>
-
+    {% endfor %}
+    {% for service in services|slice:"1:2"  %}
     <div class="service-container-reverse">
       <div class="row align-items-start">
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-2.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">تولید و تامین تجهیزات حفاظت فردی</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+
+    {% for service in services|slice:"2:3"  %}
     <div class="service-container">
       <div class="row align-items-start">
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">شارژ کپسول آتش نشانی</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-3.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
+        
       </div>
     </div>
-
+    {% endfor %}
+    {% for service in services|slice:"3:4"  %}
     <div class="service-container-reverse">
       <div class="row align-items-start">
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-4.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">خدمات مشاوره</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    {% for service in services|slice:"4:5"  %}
     <div class="service-container">
       <div class="row align-items-start">
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">سمپاشی</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-5.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
+        
       </div>
     </div>
-
+    {% endfor %}
+    {% for service in services|slice:"5:6"  %}
     <div class="service-container-reverse">
       <div class="row align-items-start">
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-6.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
         </div>
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">خدمات اداری</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    {% for service in services|slice:"6:7"  %}
     <div class="service-container">
       <div class="row align-items-start">
         <div class="right-side col-lg-6">
           <div class="title-box">
-            <h2 class="title">استقرار سیستم های مدیریتی</h2>
+            <h2 class="title">{{ service.title }}</h2>
           </div>
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ service.description }}
             </p>
           </div>
         </div>
         <div class="left-side col-lg-6">
-          <img src="{% static 'images/Rectangle-7.png' %}" alt="عکس" />
+          <img src="{{ service.image.url }}" alt="عکس" />
+        </div>
+        
+      </div>
+    </div>
+    {% endfor %}
+
+    {% for service in services|slice:"7:8"  %}
+    <div class="service-container-reverse">
+      <div class="row align-items-start">
+        <div class="left-side col-lg-6">
+          <img src="{{ service.image.url }}" alt="عکس" />
+        </div>
+        <div class="right-side col-lg-6">
+          <div class="title-box">
+            <h2 class="title">{{ service.title }}</h2>
+          </div>
+          <div class="text-box">
+            <p>
+              {{ service.description }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    {% for service in services|slice:"8:9"  %}
+    <div class="service-container">
+      <div class="row align-items-start">
+        <div class="right-side col-lg-6">
+          <div class="title-box">
+            <h2 class="title">{{ service.title }}</h2>
+          </div>
+          <div class="text-box">
+            <p>
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-6">
+          <img src="{{ service.image.url }}" alt="عکس" />
+        </div>
+        
+      </div>
+    </div>
+    {% endfor %}
+    {% for service in services|slice:"9:10"  %}
+    <div class="service-container-reverse">
+      <div class="row align-items-start">
+        <div class="left-side col-lg-6">
+          <img src="{{ service.image.url }}" alt="عکس" />
+        </div>
+        <div class="right-side col-lg-6">
+          <div class="title-box">
+            <h2 class="title">{{ service.title }}</h2>
+          </div>
+          <div class="text-box">
+            <p>
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for service in services|slice:"10:11"  %}
+    <div class="service-container">
+      <div class="row align-items-start">
+        <div class="right-side col-lg-6">
+          <div class="title-box">
+            <h2 class="title">{{ service.title }}</h2>
+          </div>
+          <div class="text-box">
+            <p>
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-6">
+          <img src="{{ service.image.url }}" alt="عکس" />
+        </div>
+        
+      </div>
+    </div>
+    {% endfor %}
 
    {% endblock %}

@@ -57,7 +57,7 @@ class Article(models.Model):
     description = models.TextField(
         null=False, blank=False, verbose_name='توضیحات')
     reference = models.TextField(
-        default=False, null=False, blank=False, verbose_name='منابع')
+        null=False, blank=False, verbose_name='منابع')
     image = models.ImageField(null=False, blank=False, verbose_name='عکس')
     publish = models.DateTimeField(
         default=timezone.now, verbose_name='تاریخ انتشار')

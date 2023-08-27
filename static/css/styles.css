@@ -859,6 +859,7 @@ h2 {
 .service-container .title-box .title {
   font-size: 20px;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .service-container .text-box {

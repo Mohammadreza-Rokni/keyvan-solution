@@ -43,7 +43,7 @@ class OurSolutionsListView(ListView):
 class OurServicesListView(ListView):
     model = Ourservices
     template_name = 'services/services.html'
-    context_object_name = "ourservices"
+    context_object_name = "services"
 
 
 # class OurServicesDetailView(DetailView):
