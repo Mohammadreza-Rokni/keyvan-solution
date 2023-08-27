@@ -11,15 +11,15 @@
         </div>
       </div>
     </div>
-
+    {% for solution in solutions|slice:"0:1"  %}
     <div  id="rahkar-imeni" class="solutions-container text-center">
       <div class="row align-items-end">
         <div class="col-lg-4 side">
-          <img src="{% static 'images/solutions-1.png' %}" alt="عکس" />
+          <img src="{{ solution.image.url }}" alt="عکس" />
         </div>
         <div class="col-lg-4">
           <div class="title-box">
-            <h2 class="title">راهکار های ایمنی</h2>
+            <h2 class="title">{{ solution.title }}</h2>
           </div>
         </div>
         <div class="col-lg-4"></div>
@@ -28,60 +28,46 @@
         <div class="col">
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ solution.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
-
+    {% endfor %}
+    {% for solution in solutions|slice:"1:2"  %}
     <div id="rahkar-behdashti" class="solutions-container text-center">
       <div class="row align-items-end first-item">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
           <div class="title-box">
-            <h2 class="title">راهکار های بهداشتی</h2>
+            <h2 class="title">{{ solution.title }}</h2>
           </div>
         </div>
         <div class="col-lg-4 side">
-          <img src="{% static 'images/solutions-2.png' %}" alt="عکس" />
+          <img src="{{ solution.image.url }}" alt="عکس" />
         </div>
       </div>
       <div class="row">
         <div class="col">
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ solution.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
-
+    {% endfor %}
+    {% for solution in solutions|slice:"2:3"  %}
     <div id="rahkar-mohiti" class="solutions-container text-center">
       <div class="row align-items-end">
         <div class="col-lg-4 side">
-          <img src="{% static 'images/solutions-3.png' %}" alt="عکس" />
+          <img src="{{ solution.image.url }}" alt="عکس" />
         </div>
         <div class="col-lg-4">
           <div class="title-box">
-            <h2 class="title">راهکار های محیط زیستی</h2>
+            <h2 class="title">{{ solution.title }}</h2>
           </div>
         </div>
         <div class="col-lg-4"></div>
@@ -90,49 +76,35 @@
         <div class="col">
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ solution.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
-
+    {% endfor %}
+    {% for solution in solutions|slice:"3:4"  %}
     <div id="rahkar-modiriati" class="solutions-container text-center">
       <div class="row align-items-end first-item">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
           <div class="title-box">
-            <h2 class="title">راهکار های مدیریتی</h2>
+            <h2 class="title">{{ solution.title }}</h2>
           </div>
         </div>
         <div class="col-lg-4 side">
-          <img src="{% static 'images/solutions-4.png' %}" alt="عکس" />
+          <img src="{{ solution.image.url }}" alt="عکس" />
         </div>
       </div>
       <div class="row">
         <div class="col">
           <div class="text-box">
             <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
-              موجود در
+              {{ solution.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
 {% endblock %}

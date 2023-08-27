@@ -31,7 +31,7 @@ class ArticleDetailView(DetailView):
 class OurSolutionsListView(ListView):
     model = Oursolutions
     template_name = 'services/solutions.html'
-    context_object_name = "oursolutions"
+    context_object_name = "solutions"
 
 
 
