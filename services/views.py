@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.core.paginator import Paginator
 from django.views.generic import DetailView, ListView
 from .models import Oursolutions, Ourservices, Ourproducts, Article
 # Create your views here.
@@ -60,3 +61,13 @@ class OurProductsListView(ListView):
 # class OurProductsDetailView(DetailView):
 #     template_name = 'index.html'
 #     model = Ourproducts
+
+def search(request): 
+    q = request.GET.get('q')
+    articles = Article.objects.filter(title__icontains=q)
+    page_number = request.GET.get('page')
+    paginator = Paginator(articles, 1)
+    objects_list = paginator.get_page(page_number)
+    if not objects_list:
+        return render(request, '404/404.html')
+    return render(request, 'services/blog.html', {'articles': objects_list})

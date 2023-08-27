@@ -12,4 +12,5 @@ urlpatterns = [
          name='ourservices_list'),
     path("productslist", views.OurProductsListView.as_view(),
          name='ourproducts_list'),
+    path('search/', views.search, name='search_blog'),
 ]

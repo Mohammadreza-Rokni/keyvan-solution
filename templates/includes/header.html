@@ -70,12 +70,13 @@
             </li>
           </ul>
           <span class="nav-item">
-            <form class="d-flex ml-auto" role="search">
+            <form class="d-flex ml-auto" role="search" action="{% url 'services:search_blog' %}">
               <button type="submit" class="search-icon btn btn-link">
                 <i class="fas fa-search"></i>
               </button>
               <input
                 class="form-control me-2"
+                name="q"
                 type="search"
                 placeholder="جست و جو کنید"
                 aria-label="Search"
