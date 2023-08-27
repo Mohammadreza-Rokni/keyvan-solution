@@ -165,6 +165,7 @@ class CheckOTPView(View):
 class AboutUsView(ListView):
     template_name = 'us/aboutus.html'
     model = Aboutus
+    context_object_name = 'aboutus'
 
 class WorkWithUsView(TemplateView):
     template_name = 'us/workwithusform.html'

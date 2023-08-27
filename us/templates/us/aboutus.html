@@ -43,67 +43,253 @@
         </div>
       </div>
     </div>
-
+    {% for about in aboutus|slice:"0:1"  %}
     <div class="aboutus-container">
       <div class="row align-items-end">
         <div class="left-side col-lg-5 col-md-12">
           <div class="aboutus-image">
-            <img src="{% static 'images/aboutus1.png' %}" alt="عکس" />
+            <img src="{{ about.image.url }}" alt="عکس" />
           </div>
         </div>
         <div class="right-side col-lg-7 col-md-12">
           <div class="text-box">
-            <h2 class="title">چشم انداز</h2>
+            <h2 class="title">{{ about.title }}</h2>
             <p>
-              در نظر داریم تا سال 1403 شبکه خدمات EHSM خود را در سراسر ایران
-              گسترش دهیم و خدمات تخصصی خود را به 25% از صنایع و بنگاههای کسب و
-              کار سطح کشور عرضه نمائیم.
+              {{ about.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
-
+    {% endfor %}
+    {% for about in aboutus|slice:"1:2"  %}
     <div class="aboutus-container">
       <div class="row align-items-end second-aboutus">
         <div class="col-lg-7 col-md-12">
           <div class="text-box">
-            <h2 class="title">ماموریت</h2>
+            <h2 class="title">{{ about.title }}</h2>
             <p>
-              ماموریت ما در نام ما نهفته است. ما برآنیم تا حفاظت از محیط زیست را
-              بعنوان اولویت اهداف، استراتژی کسب و کار خود قرار دهیم و همواره
-              محصولات و خدمات دوستدار محیط زیست تولید و ارائه نمائیم؛ و بتوانیم
-              در این راه همکاران و مشتریان خود را نیز با این اصل همسو سازیم.
+              {{ about.description }}
             </p>
           </div>
         </div>
         <div class="left-side col-lg-5 col-md-12">
           <div class="aboutus-image">
-            <img src="{% static 'images/aboutus2.png' %}" alt="Image" />
+            <img src="{{ about.image.url }}" alt="Image" />
           </div>
         </div>
       </div>
     </div>
-
+    {% endfor %}
+    {% for about in aboutus|slice:"2:3"  %}
     <div class="aboutus-container">
       <div class="row align-items-end">
         <div class="left-side col-lg-5 col-md-12">
           <div class="aboutus-image">
-            <img src="{% static 'images/aboutus3.png' %}" alt="عکس" />
+            <img src="{{ about.image.url }}" alt="عکس" />
           </div>
         </div>
         <div class="right-side col-lg-7 col-md-12">
           <div class="text-box">
-            <h2 class="title">مسئولیت اجتماعی</h2>
+            <h2 class="title">{{ about.title }}</h2>
             <p>
-              ماموریت ما در نام ما نهفته است. ما برآنیم تا حفاظت از محیط زیست را
-              بعنوان اولویت اهداف، استراتژی کسب و کار خود قرار دهیم و همواره
-              محصولات و خدمات دوستدار محیط زیست تولید و ارائه نمائیم؛ و بتوانیم
-              در این راه همکاران و مشتریان خود را نیز با این اصل همسو سازیم.
+              {{ about.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"3:4"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end second-aboutus">
+        <div class="col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"4:5"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end">
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="عکس" />
+          </div>
+        </div>
+        <div class="right-side col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"5:6"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end second-aboutus">
+        <div class="col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"6:7"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end">
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="عکس" />
+          </div>
+        </div>
+        <div class="right-side col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"7:8"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end second-aboutus">
+        <div class="col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"8:9"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end">
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="عکس" />
+          </div>
+        </div>
+        <div class="right-side col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    {% for about in aboutus|slice:"9:10"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end second-aboutus">
+        <div class="col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"10:11"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end">
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="عکس" />
+          </div>
+        </div>
+        <div class="right-side col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"11:12"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end second-aboutus">
+        <div class="col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for about in aboutus|slice:"12:13"  %}
+    <div class="aboutus-container">
+      <div class="row align-items-end">
+        <div class="left-side col-lg-5 col-md-12">
+          <div class="aboutus-image">
+            <img src="{{ about.image.url }}" alt="عکس" />
+          </div>
+        </div>
+        <div class="right-side col-lg-7 col-md-12">
+          <div class="text-box">
+            <h2 class="title">{{ about.title }}</h2>
+            <p>
+              {{ about.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
 
    {% endblock %}
