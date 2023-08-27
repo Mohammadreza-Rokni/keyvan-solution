@@ -68,6 +68,12 @@ function applyFilter(filterValue) {
 $(".message a").click(function () {
   $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
 });
+
+
+function submitted(){
+  console.log("form submitted");
+  return false;
+}
 // document.addEventListener("DOMContentLoaded", function () {
 //   const filterDropdown = document.getElementById("filterDropdown");
 //   const filterItems = document.querySelectorAll(".filter-item");

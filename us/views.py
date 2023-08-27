@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from uuid import uuid4
-from django.views.generic import DetailView, ListView, FormView, UpdateView, View
+from django.views.generic import DetailView, ListView, FormView, UpdateView, View,TemplateView
 from .models import Customer, Contactus, Aboutus, JobPos, OTP, Resume
 from .forms import JobSeekerForm, SupplierForm, ResumeForm, OTPForm, CheckOTPForm
 from random import randint
@@ -165,3 +165,9 @@ class CheckOTPView(View):
 class AboutUsView(ListView):
     template_name = 'us/aboutus.html'
     model = Aboutus
+
+class WorkWithUsView(TemplateView):
+    template_name = 'us/workwithusform.html'
+    model = Contactus
+    # context_object_name = 'contacts'
+    # form_class = ResumeForm

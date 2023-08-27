@@ -449,10 +449,14 @@
 }
 
 /* ============== customer page ============== */
-
 @media (max-width: 1000px) {
   .customers-container .left-side {
     text-align: center;
+  }
+  
+  .customers-container .left-side img {
+
+    width: 65%;
   }
 
   .customers-container .title-box .title {
