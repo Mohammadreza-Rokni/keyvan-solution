@@ -5,10 +5,10 @@ from django.utils.text import slugify
 
 # Create your models here.
 
-FIELD_OF_ACTIVITY_CHOICES = [
-    ('Product', 'Product'),
-    ('Services available', 'Services available')
-]
+# FIELD_OF_ACTIVITY_CHOICES = [
+#     ('Product', 'Product'),
+#     ('Services available', 'Services available')
+# ]
 
 DEGREE_OF_EDUCATION_CHOICES = [
     ('Diploma', 'Diploma'),
@@ -36,30 +36,37 @@ class OTP(models.Model):
 
 
 class Contactus(models.Model):
-    title = models.CharField(max_length=100, verbose_name='عنوان')
-    text = models.TextField(verbose_name='متن')
-    created = models.DateTimeField(verbose_name='تاریخ')
+    # title = models.CharField(max_length=100, verbose_name='عنوان')
+    # text = models.TextField(verbose_name='متن')
     full_name = models.CharField(
         max_length=200, verbose_name='نام و نام خانوادگی')
-    phone_number = models.CharField(max_length=11, verbose_name='شماره موبایل')
+    landlineـphone = models.CharField(max_length=11, verbose_name=' تلفن ثابت')
+    cellular_phone = models.CharField(
+        max_length=11, verbose_name='تلفن همراه')
+    email = models.EmailField(verbose_name='ایمیل')
     field_of_activity = models.CharField(
-        max_length=100, choices=FIELD_OF_ACTIVITY_CHOICES, verbose_name='حوضه فعالیت')
-    activity_province = models.CharField(
-        max_length=100, verbose_name='استان فعالیت')
-    date_of_birth = models.DateField(verbose_name='تاریخ تولد')
-    degree_of_education = models.CharField(
-        max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES, verbose_name='میزان تحصیلات')
-    field_of_study = models.CharField(
-        max_length=100, verbose_name='رشته تحصیلی')
-    skill = models.TextField(verbose_name='مهارت')
-    history = models.IntegerField(verbose_name='تجربه')
-    type_of_cooperation = models.CharField(
-        max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
+        max_length=200, verbose_name='زمینه فعالیت')
+    prudoct = models.CharField(max_length=200, verbose_name='محصول / خدمات')
+    state = models.CharField(
+        max_length=200, verbose_name='استان')
+    city = models.CharField(
+        max_length=200, verbose_name='شهر')
+    address = models.TextField(verbose_name='آدرس')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ')
+    # date_of_birth = models.DateField(verbose_name='تاریخ تولد')
+    # degree_of_education = models.CharField(
+    #     max_length=100, choices=DEGREE_OF_EDUCATION_CHOICES, verbose_name='میزان تحصیلات')
+    # field_of_study = models.CharField(
+    #     max_length=100, verbose_name='رشته تحصیلی')
+    # skill = models.TextField(verbose_name='مهارت')
+    # history = models.IntegerField(verbose_name='تجربه')
+    # type_of_cooperation = models.CharField(
+    #     max_length=100, choices=TYPE_OF_COOPERATION_CHOICES, verbose_name='نوع همکاری')
     verification_code = models.ForeignKey(
         OTP, related_name='verification_code', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.title
+        return self.full_name
 
     class Meta:
         verbose_name = "تماس با ما"

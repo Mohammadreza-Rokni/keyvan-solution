@@ -1,9 +1,12 @@
+from .forms import WorkWithUsForm
+from .models import Contactus
+from django.views import View
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from uuid import uuid4
-from django.views.generic import DetailView, ListView, FormView, UpdateView, View,TemplateView
+from django.views.generic import DetailView, ListView, FormView, UpdateView, View, TemplateView
 from .models import Customer, Contactus, Aboutus, JobPos, OTP, Resume
-from .forms import JobSeekerForm, SupplierForm, ResumeForm, OTPForm, CheckOTPForm
+from .forms import ResumeForm, OTPForm, CheckOTPForm, WorkWithUsForm
 from random import randint
 import requests
 import ghasedakpack
@@ -154,7 +157,7 @@ class CheckOTPView(View):
             if OTP.objects.filter(code=cd['code'], token=token).exists():
                 otp = OTP.objects.get(token=token)
                 otp.delete()
-                return redirect('home:home')
+                return redirect('us:workwithus')
 
         else:
             form.add_error("code", "invalid data")
@@ -162,13 +165,27 @@ class CheckOTPView(View):
         return render(request, 'us/checkotp.html', {'form': form})
 
 
+class WorkWithUsView(View):
+    template_name = 'us/workwithusform.html'
+
+    def get(self, request):
+        form = WorkWithUsForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = WorkWithUsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home:home')
+        return render(request, self.template_name, {'form': form})
+
+
 class AboutUsView(ListView):
     template_name = 'us/aboutus.html'
     model = Aboutus
     context_object_name = 'aboutus'
 
-class WorkWithUsView(TemplateView):
-    template_name = 'us/workwithusform.html'
-    model = Contactus
-    # context_object_name = 'contacts'
-    # form_class = ResumeForm
+
+# class WorkWithUsView(TemplateView):
+#     template_name = 'us/workwithusform.html'
+#     model = Contactus

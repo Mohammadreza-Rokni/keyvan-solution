@@ -105,10 +105,6 @@
                 </li>
                 <li class="nav-item nav-item dropdown">
                   <a class="nav-link" href="{% url 'services:ourservices_list' %}">خدمات</a>
-                  <!-- <ul class="dropdown-menu">
-                    <li><a href="#">مورد 1</a></li>
-                    <li><a href="#">مورد 2</a></li>
-                  </ul> -->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'us:customers' %}">مشتریان</a>
@@ -163,29 +159,27 @@
         </div>
       </div>
     <div style="padding: 2%;" class="container">
-        <form onsubmit="submitted();">
-            <div class="row">
+        <form  method="post" onsubmit="submitted();">
+            <div class="row" >
+              {% csrf_token %}
+              <input type="hidden" name="token" value="{{ token }}">
 
                 <!-- first col -->
                 <div id="personal_info" class="col-md-6">
                     <!-- Name -->
                     <div class="form-group mt-2">
                         <label for="name">نام و نام خانوادگی</label>
-                        <input style="background-color: #f0f0f0;" type="text" class="form-control" id="name" placeholder="">
+                        {{ form.full_name }}
+                        
                     </div>
 
                     <!-- Email -->
                     <div class="form-group mt-2">
                         <label for="email">ایمیل</label>
-                        <input style="background-color: #f0f0f0;" type="email" class="form-control" id="email" placeholder="">
+                        {{ form.email }}
+                        
                         
                     </div>
-
-                 
-
-                    
-
-                   
 
                 </div>
 
@@ -195,17 +189,16 @@
                     <!-- Contact -->
                     <div class="form-group mt-2">
                         <label for="contact">تلفن ثابت</label>
-                        <input style="background-color: #f0f0f0;" type="tel" class="form-control" id="contact" placeholder="">
+                        {{ form.landlineـphone }}
+                        
                     </div>
                       <!-- Contact -->
                     <div class="form-group mt-2">
                         <label for="contact">تلفن همراه</label>
-                        <input style="background-color: #f0f0f0;" type="tel" class="form-control" id="contact" placeholder="">
+                        {{ form.cellular_phone }}
+                        
                     </div>
                   
-                  
-
- 
                 </div>
 
             </div>
@@ -217,7 +210,8 @@
                         <!-- experience -->
                     <div class="form-group mt-2">
                         <label for="contact">زمینه فعالیت</label>
-                        <input style="background-color: #f0f0f0;" type="tel" class="form-control" id="contact" placeholder="">
+                        {{ form.field_of_activity }}
+                        
                     </div>
                 </div>
 
@@ -227,10 +221,9 @@
                      <!-- service/product -->
                     <div class="form-group mt-2">
                         <label for="contact">محصول / خدمات </label>
-                        <input style="background-color: #f0f0f0;" type="tel" class="form-control" id="contact" placeholder="">
+                        {{ form.prudoct }}
+                       
                     </div>
-
-
  
                 </div>
 
@@ -242,7 +235,8 @@
                     <!-- Name -->
                     <div class="form-group mt-2">
                         <label for="name">استان</label>
-                        <input style="background-color: #f0f0f0;" type="text" class="form-control" id="name" placeholder="استان خود را انتخاب کنید">
+                        {{ form.state }}
+                        
                     </div>
                 </div>
 
@@ -252,11 +246,11 @@
                     <!-- Contact -->
                     <div class="form-group mt-2">
                         <label for="contact">شهر</label>
-                        <input style="background-color: #f0f0f0;" type="tel" class="form-control" id="contact" placeholder="شهر خود را انتخاب کنید">
+                        {{ form.city }}
+                        
                     </div>
 
 
- 
                 </div>
 
             </div>
@@ -267,8 +261,8 @@
                     <!-- Address -->
                     <div class="form-group mt-2">
                         <label for="address">آدرس</label>
-                        <textarea style="background-color: #f0f0f0;" name="address" class="form-control" id="address"
-                            placeholder=""></textarea>
+                        {{form.address}}
+                        
                     </div>
                   
                 </div>  
@@ -277,8 +271,7 @@
             <div class="row">
                 <!-- second col -->
                 <div id="professional_info" class="col-md-12">
-<h2></h2>                 <!-- Address -->
-    <h2></h2>                <div class="form-group mt-2">
+                <div class="form-group mt-2">
                         <label style="color: #000000; font-size: 20px;" for="id_resume">آپلود رزومه<img style="background-color: rgba(147, 75, 148, 1); border-radius: 15px;" src="{% static 'images/upload.png' %}" alt="عکس" /></label>
                         <input style="display: none;" type="file" name="resume" required="" id="id_resume">
                     </div>
@@ -286,10 +279,11 @@
                 </div>  
 
             </div>
+            <div class="container text-center m-5">
+              <button style="width: 20%; font-size: 30px; background-color:  rgba(147, 75, 148, 1);" class="btn btn-primary" name="submit" type="submit">ارسال</button>
+          </div>
         </form>
-        <div class="container text-center m-5">
-            <button style="width: 20%; font-size: 30px; background-color:  rgba(147, 75, 148, 1);" class="btn btn-primary" name="submit">ارسال</button>
-        </div>
+        
     </div>
 
     <!-- script -->
