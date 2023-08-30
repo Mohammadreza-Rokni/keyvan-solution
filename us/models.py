@@ -1,9 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
-
-
-# Create your models here.
+from iranian_cities.fields import OstanField, ShahrestanField
 
 FIELD_OF_ACTIVITY_CHOICES = [
     ('خدمات دهنده', 'خدمات دخنده'),
@@ -49,10 +47,8 @@ class Contactus(models.Model):
     area_of_activity = models.CharField(
         max_length=200, verbose_name='زمینه فعالیت')
     prudoct = models.CharField(max_length=200, verbose_name='محصول / خدمات')
-    state = models.CharField(
-        max_length=200, verbose_name='استان')
-    city = models.CharField(
-        max_length=200, verbose_name='شهر')
+    state = OstanField(verbose_name='استان')
+    city = ShahrestanField(verbose_name='شهر')
     address = models.TextField(verbose_name='آدرس')
     created = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ')
     # date_of_birth = models.DateField(verbose_name='تاریخ تولد')

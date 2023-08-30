@@ -25,9 +25,9 @@ class WorkWithUsForm(forms.ModelForm):
             'cellular_phone': forms.TextInput(attrs={'class': 'form-control custom-input', 'type': 'tel'}),
             'area_of_activity': forms.TextInput(attrs={'class': 'form-control custom-input'}),
             'prudoct': forms.TextInput(attrs={'class': 'form-control custom-input'}),
-            'state': forms.TextInput(attrs={'class': 'form-control custom-input'}),
-            'city': forms.TextInput(attrs={'class': 'form-control custom-input'}),
-            'address': forms.TextInput(attrs={'class': 'form-control custom-input', 'type': 'text'}),
+            'state': forms.Select(attrs={'class': 'form-control custom-input'}),
+            'city': forms.Select(attrs={'class': 'form-control custom-input'}),
+            'address': forms.Textarea(attrs={'class': 'form-control custom-input'}),
         }
 
 

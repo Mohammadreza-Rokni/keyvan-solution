@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'home.apps.HomeConfig',
     'us.apps.UsConfig',
     'services.apps.ServicesConfig',
+
+    'iranian_cities',
 ]
 
 MIDDLEWARE = [
