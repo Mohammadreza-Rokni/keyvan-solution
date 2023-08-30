@@ -18,15 +18,16 @@ class WorkWithUsForm(forms.ModelForm):
         model = Contactus
         exclude = ['verification_code', 'created']
         widgets = {
+            'field_of_activity': forms.Select(attrs={'class': 'form-control custom-input'}),
             'full_name': forms.TextInput(attrs={'class': 'form-control custom-input'}),
             'email': forms.EmailInput(attrs={'class': 'form-control custom-input'}),
             'landlineـphone': forms.TextInput(attrs={'class': 'form-control custom-input', 'type': 'tel'}),
             'cellular_phone': forms.TextInput(attrs={'class': 'form-control custom-input', 'type': 'tel'}),
-            'field_of_activity': forms.TextInput(attrs={'class': 'form-control custom-input'}),
+            'area_of_activity': forms.TextInput(attrs={'class': 'form-control custom-input'}),
             'prudoct': forms.TextInput(attrs={'class': 'form-control custom-input'}),
             'state': forms.TextInput(attrs={'class': 'form-control custom-input'}),
             'city': forms.TextInput(attrs={'class': 'form-control custom-input'}),
-            'address': forms.TextInput(attrs={'class': 'form-control custom-input'}),
+            'address': forms.TextInput(attrs={'class': 'form-control custom-input', 'type': 'text'}),
         }
 
 

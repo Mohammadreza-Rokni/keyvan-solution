@@ -5,10 +5,10 @@ from django.utils.text import slugify
 
 # Create your models here.
 
-# FIELD_OF_ACTIVITY_CHOICES = [
-#     ('Product', 'Product'),
-#     ('Services available', 'Services available')
-# ]
+FIELD_OF_ACTIVITY_CHOICES = [
+    ('خدمات دهنده', 'خدمات دخنده'),
+    ('سرویس دهنده', 'سرویس دهنده')
+]
 
 DEGREE_OF_EDUCATION_CHOICES = [
     ('Diploma', 'Diploma'),
@@ -38,13 +38,15 @@ class OTP(models.Model):
 class Contactus(models.Model):
     # title = models.CharField(max_length=100, verbose_name='عنوان')
     # text = models.TextField(verbose_name='متن')
+    field_of_activity = models.CharField(
+        max_length=200, choices=FIELD_OF_ACTIVITY_CHOICES, verbose_name='حوضه فعالیت')
     full_name = models.CharField(
         max_length=200, verbose_name='نام و نام خانوادگی')
     landlineـphone = models.CharField(max_length=11, verbose_name=' تلفن ثابت')
     cellular_phone = models.CharField(
         max_length=11, verbose_name='تلفن همراه')
     email = models.EmailField(verbose_name='ایمیل')
-    field_of_activity = models.CharField(
+    area_of_activity = models.CharField(
         max_length=200, verbose_name='زمینه فعالیت')
     prudoct = models.CharField(max_length=200, verbose_name='محصول / خدمات')
     state = models.CharField(

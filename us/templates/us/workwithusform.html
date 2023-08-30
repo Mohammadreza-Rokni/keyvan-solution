@@ -164,6 +164,13 @@
               {% csrf_token %}
               <input type="hidden" name="token" value="{{ token }}">
 
+              <div id="personal_info" class="col-md-12">
+                <div class="form-group mt-2" style="width: 49%;">
+                    <label for="name">زمینه فعالیت</label>
+                    {{ form.field_of_activity }}
+                </div>
+              </div>
+
                 <!-- first col -->
                 <div id="personal_info" class="col-md-6">
                     <!-- Name -->
@@ -210,7 +217,7 @@
                         <!-- experience -->
                     <div class="form-group mt-2">
                         <label for="contact">زمینه فعالیت</label>
-                        {{ form.field_of_activity }}
+                        {{ form.area_of_activity }}
                         
                     </div>
                 </div>
