@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from iranian_cities.fields import OstanField, ShahrestanField
 
 FIELD_OF_ACTIVITY_CHOICES = [
-    ('خدمات دهنده', 'خدمات دخنده'),
+    ('خدمات دهنده', 'خدمات دهنده'),
     ('سرویس دهنده', 'سرویس دهنده')
 ]
 
